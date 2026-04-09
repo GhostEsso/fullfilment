@@ -1,0 +1,52 @@
+{
+  "placeholderImages": [
+    {
+      "id": "hero-offer-1",
+      "description": "Fulfillment services overview",
+      "imageUrl": "/assets/images/pic.jpg",
+      "imageHint": "warehouse logistics"
+    },
+    {
+      "id": "hero-offer-2",
+      "description": "Fulfillment services printing and processing",
+      "imageUrl": "/assets/images/pic2.webp",
+      "imageHint": "delivery service"
+    },
+    {
+      "id": "hero-offer-3",
+      "description": "Strategic fulfillment infrastructure",
+      "imageUrl": "/assets/images/pic3.jpg",
+      "imageHint": "warehouse technology"
+    },
+    {
+      "id": "hero-offer-4",
+      "description": "Warehouse management and tracking",
+      "imageUrl": "/assets/images/capa-fullfilment.jpg",
+      "imageHint": "logistics center"
+    },
+    {
+      "id": "hero-offer-5",
+      "description": "Worldwide fulfillment network",
+      "imageUrl": "/assets/images/pic5.avif",
+      "imageHint": "global logistics"
+    },
+    {
+      "id": "about-kaba",
+      "description": "A wide shot of the KABA DELIVERY fulfillment center exterior.",
+      "imageUrl": "/assets/images/fullfilment-cif-1080x675.png",
+      "imageHint": "logistics center"
+    },
+    {
+      "id": "location-pickup",
+      "description": "The customer pickup area at the KABA DELIVERY point of sale in Lomé.",
+      "imageUrl": "/assets/images/pic4.jpg",
+      "imageHint": "customer service"
+    },
+    {
+      "id": "cta-image",
+      "description": "Fulfillment processing and delivery",
+      "imageUrl": "/assets/images/pic2.webp",
+      "imageHint": "delivery scooter"
+    }
+  ]
+}
