@@ -64,7 +64,7 @@ export function Cta() {
               </p>
               <Button size="lg" className="mt-8 bg-primary-foreground text-primary hover:bg-primary-foreground/90" asChild>
                 <a href={getWhatsAppLink()} target="_blank" rel="noopener noreferrer">
-                  Démarrer avec KABA
+                  Démarrer avec Kaba-Fulfillment
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </a>
               </Button>

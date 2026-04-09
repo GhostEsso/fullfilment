@@ -240,7 +240,7 @@ export const faqItems = [
     value: 'item-1',
     question: 'Quels sont les frais de mise en stock ?',
     answer:
-      'KABA facture 5 000 FCFA pour la récupération et l\'acheminement initial de votre stock vers notre Direction Logistique.',
+      'Kaba-Fulfillment facture 5 000 FCFA pour la récupération et l\'acheminement initial de votre stock vers notre Direction Logistique.',
   },
   {
     value: 'item-2',
