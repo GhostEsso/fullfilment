@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     images: ['/icon.png'],
   },
   icons: {
-    icon: '/icon.png',
+    icon: '/icon.png?v=1',
   },
 };
 
