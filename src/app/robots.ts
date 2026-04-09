@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/admin/',
     },
-    sitemap: 'https://fullfilment.kaba-delivery.com/sitemap.xml',
+    sitemap: 'https://fullfilment-eight.vercel.app/sitemap.xml',
   };
 }

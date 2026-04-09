@@ -12,7 +12,7 @@ const urbanist = Urbanist({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://fullfilment.kaba-delivery.com'),
+  metadataBase: new URL('https://fullfilment-eight.vercel.app'),
   title: 'KABA Fulfillment - Logistique & Livraison en Zone UEMOA',
   description:
     'Solutions de stockage, gestion de commandes et livraison pour les e-commerçants. Kaba-Fulfillment optimise votre logistique en Côte d’Ivoire, Sénégal, Togo, Bénin.',
