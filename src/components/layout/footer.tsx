@@ -12,15 +12,15 @@ export function Footer() {
             <Link href="/" className="flex items-center gap-2 mb-4">
               <Image 
                 src="/assets/logo.png" 
-                alt="KABA DELIVERY" 
+                alt="Kaba-Fulfillment - Votre partenaire logistique" 
                 width={200} 
                 height={60} 
                 className="h-16 w-auto object-contain"
               />
             </Link>
             <p className="text-sm">
-              Solutions de stockage, gestion de commandes et livraison pour les
-              e-commerçants et marques de la zone UEMOA.
+              Solutions de stockage, gestion de commandes et livraison. 
+              Kaba-Fulfillment accompagne les e-commerçants et marques de la zone UEMOA.
             </p>
           </div>
           <div>
@@ -63,7 +63,7 @@ export function Footer() {
           </div>
         </div>
         <div className="border-t mt-8 pt-6 text-center text-xs">
-          <p>&copy; {new Date().getFullYear()} KABA DELIVERY. Tous droits réservés.</p>
+          <p>&copy; {new Date().getFullYear()} Kaba-Fulfillment. Tous droits réservés.</p>
         </div>
       </div>
     </footer>

@@ -52,10 +52,10 @@ export function About() {
                 Fulfillment Haute Performance
             </div>
             <h2 className="text-4xl font-black font-headline tracking-tighter sm:text-6xl text-foreground leading-[1.1]">
-              KABA — Le Meilleur Fulfillment en Afrique.
+              Kaba-Fulfillment — Le Meilleur en Afrique de l'Ouest.
             </h2>
             <p className="mt-6 text-xl leading-relaxed text-muted-foreground font-medium">
-              Rejoignez les e-commerçants qui font confiance à KABA pour gérer leur logistique de A à Z. Concentrez-vous sur vos ventes, on s'occupe du reste.
+              Rejoignez les e-commerçants qui font confiance à Kaba-Fulfillment pour gérer leur logistique de A à Z. Concentrez-vous sur vos ventes, on s'occupe du reste.
             </p>
             
             <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-8">

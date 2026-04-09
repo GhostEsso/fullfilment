@@ -51,7 +51,7 @@ export function Header() {
         <Link href="/" className="flex items-center gap-2 group relative z-50">
           <Image 
             src="/assets/logo.png" 
-            alt="KABA DELIVERY" 
+            alt="Kaba-Fulfillment - Logistique e-commerce" 
             width={180} 
             height={60} 
             className="h-10 md:h-16 w-auto object-contain transition-all group-hover:scale-105"

@@ -53,7 +53,7 @@ export function WhyKaba() {
         <div className="max-w-2xl mb-16" ref={titleRef}>
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-foreground">
             Pourquoi Choisir{' '}
-            <span className="text-primary">KABA ?</span>
+            <span className="text-primary whitespace-nowrap">Kaba-Fulfillment ?</span>
           </h2>
           <p className="mt-3 text-lg text-muted-foreground">
             Plus qu'un service de livraison, nous sommes le partenaire logistique qui propulse votre entreprise.
