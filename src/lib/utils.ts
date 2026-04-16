@@ -9,11 +9,11 @@ export function cn(...inputs: ClassValue[]) {
 export const ICON_COLOR_FILTER =
   'brightness(0) saturate(100%) invert(20%) sepia(90%) saturate(2200%) hue-rotate(325deg) brightness(105%)';
 
-export const WHATSAPP_NUMBER = '22892109474'; // Updated according to standard if needed, but user said 228 92 10 94 74
-export const WHATSAPP_URL = 'https://wa.me/22892109474';
+export const WHATSAPP_NUMBER = '22870694206';
+export const WHATSAPP_URL = 'https://wa.me/22870694206';
 
 export function getWhatsAppLink(offerName?: string) {
-  const baseUrl = 'https://wa.me/22892109474';
+  const baseUrl = 'https://wa.me/22870694206';
   
   // Extract number if it follows "Offre X" pattern, otherwise use full name
   const displayOffer = offerName?.replace(/Offre\s+/i, '') || '';

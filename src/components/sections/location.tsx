@@ -47,49 +47,74 @@ export function Location() {
   }, { scope: containerRef });
 
   return (
-    <section id="location" className="bg-muted" ref={containerRef}>
-      <div className="container">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="flex justify-center" ref={imageRef}>
-            {locationImage && (
-              <Card className="overflow-hidden shadow-2xl">
+    <section id="location" className="relative py-24 md:py-32 overflow-hidden bg-white" ref={containerRef}>
+      {/* Background Decor */}
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[140px] pointer-events-none" />
+      
+      <div className="container relative z-10">
+        {/* Unified Card Container */}
+        <div 
+          ref={contentRef}
+          className="bg-white/60 backdrop-blur-xl rounded-[3rem] md:rounded-[4rem] border border-white shadow-[0_40px_100px_rgba(0,0,0,0.08)] overflow-hidden"
+        >
+          <div className="grid md:grid-cols-2">
+            
+            {/* Image Side */}
+            <div className="relative min-h-[400px] md:min-h-full" ref={imageRef}>
+              {locationImage && (
                 <Image
                   src={locationImage.imageUrl}
                   alt={locationImage.description}
-                  width={600}
-                  height={400}
-                  className="w-full h-auto object-cover"
+                  fill
+                  className="object-cover transition-transform duration-700 hover:scale-105"
                   data-ai-hint={locationImage.imageHint}
                 />
-              </Card>
-            )}
-          </div>
-          <div ref={contentRef}>
-            <div className="flex items-center gap-2 text-primary">
-              <Image
-                src="/assets/icones/Pin.svg"
-                alt="Point de vente"
-                width={24}
-                height={24}
-                className="h-6 w-6"
-                style={{ filter: ICON_COLOR_FILTER }}
-              />
-              <h3 className="text-lg font-semibold">Notre Point de Vente Physique</h3>
+              )}
+              {/* Overlay for better text blending if needed on mobile */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent md:hidden" />
             </div>
-            <h2 className="mt-2 text-3xl font-bold font-headline tracking-tight sm:text-4xl">
-              Retirez vos Commandes à Lomé
-            </h2>
-            <p className="mt-6 text-lg leading-8 text-muted-foreground">
-              Pour plus de flexibilité, vos clients ont la possibilité de
-              retirer directement leurs commandes auprès de notre direction
-              logistique à Lomé.
-            </p>
-            <p className="mt-4 text-muted-foreground">
-              Notre équipe sur place assure un service client de qualité pour
-              une expérience de retrait simple et rapide. C'est une excellente
-              option pour les clients locaux ou ceux qui préfèrent ne pas
-              attendre la livraison.
-            </p>
+
+            {/* Text Side */}
+            <div className="p-8 md:p-16 flex flex-col justify-center">
+              <div className="flex items-center gap-3 text-primary mb-8">
+                <div className="p-3 bg-primary/10 rounded-2xl">
+                  <Image
+                    src="/assets/icones/Pin.svg"
+                    alt="Point de vente"
+                    width={28}
+                    height={28}
+                    className="h-7 w-7"
+                    style={{ filter: ICON_COLOR_FILTER }}
+                  />
+                </div>
+                <span className="text-sm font-black uppercase tracking-[0.2em]">Présence Physique</span>
+              </div>
+
+              <h2 className="text-4xl font-black font-headline tracking-tighter sm:text-5xl text-foreground leading-[1.1]">
+                Votre direction <span className="text-primary italic">logistique</span> à Lomé.
+              </h2>
+
+              <p className="mt-8 text-xl leading-relaxed text-foreground/80 font-medium">
+                Offrez plus de liberté à vos clients. Ils peuvent désormais retirer leurs commandes directement dans nos locaux sécurisés à Lomé.
+              </p>
+
+              <div className="mt-10 space-y-5">
+                <div className="flex items-start gap-4 p-5 bg-white/50 rounded-2xl border border-white/40 shadow-sm transition-all hover:bg-white hover:shadow-md">
+                  <div className="mt-1.5 h-3 w-3 rounded-full bg-primary animate-pulse" />
+                  <div>
+                    <h4 className="font-black text-foreground">Service de Retrait Express</h4>
+                    <p className="text-sm text-muted-foreground mt-1">Évitez les délais de livraison pour vos clients les plus pressés.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4 p-5 bg-white/50 rounded-2xl border border-white/40 shadow-sm transition-all hover:bg-white hover:shadow-md">
+                  <div className="mt-1.5 h-3 w-3 rounded-full bg-primary" />
+                  <div>
+                    <h4 className="font-black text-foreground">Accueil Professionnel</h4>
+                    <p className="text-sm text-muted-foreground mt-1">Une équipe dédiée pour accueillir vos clients comme s'ils étaient chez vous.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

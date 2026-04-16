@@ -45,21 +45,34 @@ export function Faq() {
   }, { scope: containerRef });
 
   return (
-    <section id="faq" className="bg-background" ref={containerRef}>
-      <div className="container max-w-3xl mx-auto">
-        <div className="text-center" ref={titleRef}>
-          <h2 className="text-3xl font-bold font-headline tracking-tight sm:text-4xl">
-            Questions Fréquemment Posées
+    <section id="faq" className="relative py-24 overflow-hidden bg-background" ref={containerRef}>
+      {/* Background Decor */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[140px] pointer-events-none" />
+      
+      <div className="container relative z-10 max-w-4xl mx-auto px-5 sm:px-8">
+        <div className="text-center mb-16" ref={titleRef}>
+          <div className="inline-block bg-primary/10 text-primary px-4 py-1.5 rounded-full text-sm font-bold mb-4 uppercase tracking-wider">
+             Aide & Support
+          </div>
+          <h2 className="text-4xl font-black font-headline tracking-tighter sm:text-5xl text-foreground leading-[1.1]">
+            Tout savoir sur <span className="text-primary underline decoration-primary/20">Kaba-Fulfillment</span>
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
-            Trouvez les réponses à vos questions sur nos services.
+          <p className="mt-4 text-xl text-muted-foreground font-medium max-w-2xl mx-auto">
+            Nous avons compilé les réponses aux questions les plus fréquentes pour vous aider à démarrer rapidement.
           </p>
         </div>
-        <Accordion type="single" collapsible className="w-full mt-12" ref={accordionRef}>
+
+        <Accordion type="single" collapsible className="w-full space-y-4" ref={accordionRef}>
           {faqItems.map((item) => (
-            <AccordionItem key={item.value} value={item.value}>
-              <AccordionTrigger className="text-left">{item.question}</AccordionTrigger>
-              <AccordionContent className="text-muted-foreground">
+            <AccordionItem 
+              key={item.value} 
+              value={item.value}
+              className="group border-none bg-white/40 backdrop-blur-md rounded-2xl px-6 md:px-8 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] transition-all duration-300 border border-white/60"
+            >
+              <AccordionTrigger className="text-left text-lg font-bold py-6 hover:no-underline hover:text-primary transition-colors">
+                {item.question}
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground text-[1.05rem] leading-relaxed pb-6">
                 {item.answer}
               </AccordionContent>
             </AccordionItem>

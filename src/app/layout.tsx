@@ -65,7 +65,7 @@ export default function RootLayout({
               }),
             }}
           />
-          <main>{children}</main>
+          <main className="pt-0">{children}</main>
           <Footer />
           <Toaster />
       </body>

@@ -16,8 +16,9 @@ export const offers: ServiceOffer[] = [
   {
     id: 1,
     name: 'Offre 1',
-    subtitle: 'Stockage/gestion de commandes & Livraison GRATUITE',
-    description: 'Payé par l\'e-commerçant. La livraison est offerte à vos clients partout à Lomé.',
+    tag: 'Populaire',
+    subtitle: 'Avec Kaba, vendez à Lomé au Togo, sans y être, sans local.',
+    description: 'Payé par vous. Livraison gratuite pour tous vos clients à Lomé',
     longDescription:
       'Vendez à Lomé, sans y être, sans local. Nous gérons tout : de l\'appel de confirmation à l\'emballage et la livraison gratuite pour votre client.',
     price: '2 700 FCFA / livraison',
@@ -50,8 +51,8 @@ export const offers: ServiceOffer[] = [
   {
     id: 2,
     name: 'Offre 2',
-    subtitle: 'Stockage/gestion de commandes & Livraison PAYANTE',
-    description: 'Payé par l\'e-commerçant. Les frais de livraison sont à la charge du client.',
+    subtitle: 'Kaba est votre bureau logistique à Lomé. Vendez, nous livrons.',
+    description: 'Payé par vous. Livraison payante par vos clients selon leurs adresses.',
     longDescription:
       'Une solution économique où vous ne payez que la gestion. La livraison est facturée directement à votre client lors de la remise du colis.',
     price: '1 000 FCFA / livraison',
@@ -84,8 +85,8 @@ export const offers: ServiceOffer[] = [
   {
     id: 3,
     name: 'Offre 3',
-    subtitle: 'Abonnement avec livraison gratuite',
-    description: 'Forfait mensuel tout compris pour une sérénité totale.',
+    subtitle: 'Faites vos publicités et vendez. Kaba s’occupe du reste.',
+    description: 'Forfait mensuel tout compris, pour une sérénité totale.',
     longDescription:
       'L\'offre premium pour les commerçants établis. Un abonnement mensuel fixe qui couvre le stockage et toutes vos livraisons gratuites à Lomé.',
     price: '75 000 FCFA / mois',
@@ -113,62 +114,22 @@ export const offers: ServiceOffer[] = [
         description: 'Statistiques avancées pour piloter votre croissance.',
       },
     ],
-    backgroundImage: 'https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&q=80&w=1920',
+    backgroundImage: 'https://images.unsplash.com/photo-1510074377623-8cf13fb86c08?auto=format&fit=crop&q=80&w=1920',
   },
   {
     id: 4,
-    name: 'Offre 4',
-    subtitle: 'Abonnement sans livraison gratuite',
-    description: 'Forfait mensuel pour la gestion et le stockage.',
-    longDescription:
-      'Idéal pour externaliser votre logistique et votre service client tout en laissant les frais de livraison à la charge de vos acheteurs.',
-    price: '50 000 FCFA / mois',
-    priceDetails: [
-      { label: 'Abonnement mensuel', value: '50 000 FCFA' },
-      { label: 'Livraison client', value: 'À la charge du client' },
-      { label: 'Stockage & Emballage', value: 'Inclus' },
-      { label: 'Appels & Relances', value: 'Inclus' },
-      { label: 'Point WhatsApp', value: 'Quotidien' },
-    ],
-    features: [
-      {
-        icon: Warehouse,
-        title: 'Entreposage Pro',
-        description: 'Gestion professionnelle de vos stocks en entrepôt sécurisé.',
-      },
-      {
-        icon: Smartphone,
-        title: 'Suivi Application',
-        description: 'Application de gestion mise à votre disposition gratuitement.',
-      },
-      {
-        icon: Users,
-        title: 'Service Client',
-        description: 'Nous gérons les relances colis pour vous.',
-      },
-    ],
-    backgroundImage: 'https://images.unsplash.com/photo-1521331032864-539423c4a45a?auto=format&fit=crop&q=80&w=1920',
-  },
-  {
-    id: 5,
-    name: 'Offre 5',
-    subtitle: 'Sur Mesure',
-    description: 'Tarification adaptée à la réalité de votre activité.',
+    name: 'Offre 4 (Sur mesure)',
+    subtitle: 'Kaba vous ouvre le marché togolais. Dites à vos clients que vous vendez maintenant au Togo.',
+    description: 'Nous vous faisons une offre sur mesure, adaptée à vos réalités.',
     longDescription:
       'Vous avez des volumes importants ou des besoins atypiques (UEMOA, retours complexes) ? Nous concevons une offre personnalisée.',
     price: 'Sur devis',
     priceDetails: [
       { label: 'Volume important', value: 'Tarif spécial' },
       { label: 'Zone UEMOA', value: 'Sur demande' },
-      { label: 'Intégration API', value: 'Disponible' },
       { label: 'Gestion retours', value: 'Personnalisée' },
     ],
     features: [
-      {
-        icon: BarChart3,
-        title: 'Intégration Web',
-        description: 'Connectez votre boutique en ligne à notre logistique.',
-      },
       {
         icon: Truck,
         title: 'Export UEMOA',
@@ -230,34 +191,102 @@ export const benefits = [
   {
     icon: Store,
     iconPath: '/assets/icones/Wallet.svg',
-    title: 'Point de Vente',
-    description: 'Vos clients peuvent acheter et récupérer leurs commandes directement à notre direction.',
+    title: 'Point de Vente Physique',
+    description: 'Vos clients récupèrent leurs commandes chez nous. Notre local est le vôtre.',
   },
 ];
 
 export const faqItems = [
   {
     value: 'item-1',
-    question: 'Quels sont les frais de mise en stock ?',
+    question: 'Comment envoyer mes commandes à Kaba ?',
     answer:
-      'Kaba-Fulfillment facture 5 000 FCFA pour la récupération et l\'acheminement initial de votre stock vers notre Direction Logistique.',
+      'Dès que vos publicités génèrent des commandes, vous avez la possibilité de nous connecter à votre tableau de bord Shopify, un fichier Excel en ligne, via WhatsApp, ou par tout autre moyen.',
   },
   {
     value: 'item-2',
-    question: 'Comment fonctionnent les relances clients ?',
+    question: 'Comment expédier mes stocks ?',
     answer:
-      'Pour les offres incluant la confirmation, nous effectuons jusqu\'à 15 tentatives (3 cycles de 5 appels) pour assurer que votre client est prêt à recevoir son colis.',
+      'Kaba dispose de partenaires de transport terrestre en Afrique de l\'Ouest. Selon votre pays d\'expédition, nous vous recommandons un transporteur fiable. Les frais sont à votre charge.',
   },
   {
     value: 'item-3',
-    question: 'Livrez-vous en dehors de Lomé ?',
+    question: 'Comment retirer l’argent de mes ventes ?',
     answer:
-      'Oui, nous couvrons l\'intérieur du pays et toute la sous-région UEMOA sur devis spécial via notre offre "Sur Mesure".',
+      'Lorsque vos clients paient à l’arrivée, le montant est crédité sur votre portefeuille. Vous pouvez demander un retrait à tout moment via Mobile Money ou tout autre moyen.',
   },
   {
     value: 'item-4',
-    question: 'Comment puis-je récupérer mon argent ?',
+    question: 'Y’a-t-il d’autres frais de service ?',
     answer:
-      'Dès que la livraison est confirmée, vous pouvez demander un remboursement. Nous traitons les virements via Mobile Money en moins de 24h.',
+      'Oui, pour la récupération de votre stock et l’acheminement à notre entrepôt, des frais de 5 000 FCFA s\'appliquent.',
   },
+  {
+    value: 'item-5',
+    question: 'Kaba fait-il le service client ?',
+    answer:
+      'Oui, Kaba s’occupe du service client de 1er niveau (renseignements produits, transmission des plaintes et suggestions).',
+  },
+  {
+    value: 'item-6',
+    question: 'Puis-je retirer mon stock à tout moment ?',
+    answer: 'Votre stock peut vous être réexpédié à n’importe quel moment, à vos frais.',
+  },
+  {
+    value: 'item-7',
+    question: 'Comment suivre mon activité ?',
+    answer:
+      'Nous mettons à disposition l\'appli Kaba Partners permettant de suivre livraisons et chiffre d\'affaires. Un point journalier WhatsApp est aussi effectué.',
+  },
+  {
+    value: 'item-8',
+    question: 'Quels sont les horaires de livraison ?',
+    answer:
+      'Nous livrons du lundi au dimanche, de 07h30 à 17h30 (sauf jour de l\'An et Noël). Les commandes reçues après 17h30 sont reportées au lendemain.',
+  },
+  {
+    value: 'item-9',
+    question: 'Kaba livre-t-il partout au Togo ?',
+    answer:
+      'Nous livrons directement à Lomé et ses environs. Pour les autres régions, nous expédions les colis via nos partenaires de transport.',
+  },
+  {
+    value: 'item-10',
+    question: 'Kaba fournit-il des emballages ?',
+    answer: 'Oui, nous proposons des emballages standards en trois formats : petit, moyen et grand.',
+  },
+  {
+    value: 'item-11',
+    question: 'Quelle est la garantie juridique ?',
+    answer:
+      'Un contrat est signé avec chaque partenaire, définissant les responsabilités. Kaba garantit la sécurité de vos stocks (hors cas de force majeure).',
+  },
+];
+
+export const testimonials = [
+  {
+    quote: "Agréablement surpris par les délais de remboursement. Très belle expérience, la meilleure jusqu’ici.",
+    author: "Ecodex",
+    location: "Abidjan, Côte d’Ivoire"
+  },
+  {
+    quote: "Avec Kaba, j’ai pu commercialiser mes articles jusqu’à atteindre 3.000.000 FCFA. Demeurant à Cotonou, je fais mes publicités à Lomé et Kaba livre mes clients.",
+    author: "Africa Gadget",
+    location: "Cotonou, Bénin"
+  },
+  {
+    quote: "Nous utilisons Kaba comme partenaire de stockage et de livraison depuis 1 an maintenant. Nous touchons le marché togolais, étant en côte d’ivoire grâce à eux. Ils sont réactifs et formidables.",
+    author: "Noyara",
+    location: "Abidjan, Côte d’Ivoire"
+  },
+  {
+    quote: "Kaba est la meilleure des choses qui pouvait nous arriver. Nous arrivons à augmenter notre chiffre d’affaires en vendant au Togo, grâce à Kaba.",
+    author: "Africa Top Santé",
+    location: "Cotonou, Bénin"
+  },
+  {
+    quote: "Nous avons pu commercialiser nos scanners OBD sur le marché togolais, grâce à Kaba. La gestion des commandes est parfaite et le remboursement, parfait.",
+    author: "Burkina Buy",
+    location: "Ouagadougou, Burkina Faso"
+  }
 ];

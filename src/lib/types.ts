@@ -15,4 +15,5 @@ export interface ServiceOffer {
     description: string;
   }[];
   backgroundImage: string;
+  tag?: string;
 }
