@@ -107,13 +107,13 @@ export function WhyKaba() {
         </div>
 
         {/* CTA Button */}
-        <div className="mt-20 flex justify-center">
+        <div className="mt-16 md:mt-20 flex justify-center px-4">
           <Button 
             asChild 
             size="lg" 
-            className="h-16 px-12 text-lg font-black uppercase tracking-widest rounded-2xl shadow-[0_20px_40px_rgba(225,29,72,0.2)] hover:scale-[1.05] transition-all duration-300"
+            className="h-auto min-h-[3.5rem] py-4 md:h-16 px-6 md:px-12 text-sm md:text-lg font-black uppercase tracking-normal md:tracking-widest rounded-2xl shadow-[0_20px_40px_rgba(225,29,72,0.2)] hover:scale-[1.05] transition-all duration-300 w-full md:w-auto leading-tight whitespace-normal md:whitespace-nowrap"
           >
-            <a href={getWhatsAppLink()} target="_blank" rel="noopener noreferrer">
+            <a href={getWhatsAppLink()} target="_blank" rel="noopener noreferrer" className="text-center">
               Exploser votre croissance dès aujourd'hui
             </a>
           </Button>

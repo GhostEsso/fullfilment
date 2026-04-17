@@ -44,45 +44,47 @@ export function Cta() {
   }, { scope: containerRef });
 
   return (
-    <section className="bg-white py-24 md:py-32">
-      <div className="container px-5 sm:px-8">
+    <section className="bg-white py-12 md:py-32 overflow-hidden">
+      <div className="container mx-auto px-2 sm:px-8">
         <div
           ref={containerRef}
-          className="relative rounded-[3.5rem] bg-gradient-to-br from-primary to-[#be123c] text-primary-foreground p-8 sm:p-12 md:p-24 overflow-hidden shadow-[0_40px_100px_-20px_rgba(225,29,72,0.4)]"
+          className="relative rounded-[2rem] sm:rounded-[3.5rem] bg-gradient-to-br from-primary to-[#be123c] text-primary-foreground p-5 sm:p-12 lg:p-20 overflow-hidden shadow-[0_40px_100px_-20px_rgba(225,29,72,0.4)]"
         >
           {/* Liquid Background Effects */}
           <div className="absolute top-[-20%] right-[-10%] w-[60%] h-[80%] bg-white/10 rounded-full blur-[120px] pointer-events-none animate-pulse" />
           <div className="absolute bottom-[-10%] left-[-5%] w-[40%] h-[60%] bg-black/20 rounded-full blur-[100px] pointer-events-none" />
 
-          <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center relative z-10">
-            <div className="flex flex-col items-center md:items-start text-center md:text-left" ref={contentRef}>
-              <div className="inline-block bg-white/10 backdrop-blur-sm px-4 py-1.5 rounded-full text-xs font-black mb-6 uppercase tracking-widest border border-white/20">
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-20 items-center relative z-10">
+            {/* Text Content */}
+            <div className="flex flex-col items-center lg:items-start text-center lg:text-left" ref={contentRef}>
+              <div className="inline-block bg-white/10 backdrop-blur-sm px-3 py-1 rounded-full text-[10px] sm:text-xs font-black mb-4 sm:mb-6 uppercase tracking-widest border border-white/20">
                  C'est le moment d'agir
               </div>
-              <h2 className="text-4xl font-black font-headline tracking-tighter sm:text-5xl md:text-6xl leading-[1.05]">
+              <h2 className="text-2xl sm:text-4xl lg:text-6xl font-black font-headline tracking-tighter leading-[1.1] text-balance">
                 Prêt à <span className="text-white/80">optimiser</span> votre logistique ?
               </h2>
-              <p className="mt-8 text-xl md:text-2xl text-white/90 font-medium leading-relaxed max-w-xl">
+              <p className="mt-4 text-sm sm:text-lg text-white/90 font-medium leading-relaxed max-w-sm sm:max-w-xl">
                 Rejoignez les e-commerçants qui nous font confiance. Simplifiez vos opérations et accélérez votre croissance dès aujourd'hui.
               </p>
               
               <Button 
                 size="lg" 
-                className="mt-10 md:mt-12 bg-white text-primary hover:bg-white/95 w-full sm:w-fit h-16 px-10 rounded-[1.5rem] text-lg lg:text-xl font-black uppercase tracking-widest shadow-2xl transition-all duration-300 hover:scale-[1.05] hover:shadow-[0_20px_50px_rgba(0,0,0,0.2)] group" 
+                className="mt-6 lg:mt-10 bg-white text-primary hover:bg-white/95 w-full sm:w-fit h-auto min-h-[3rem] py-3 lg:h-16 px-2 sm:px-10 rounded-[1.25rem] lg:rounded-[1.5rem] text-[11px] sm:text-base lg:text-xl font-black uppercase tracking-wider shadow-2xl transition-all duration-300 hover:scale-[1.02] whitespace-normal lg:whitespace-nowrap leading-tight" 
                 asChild
               >
-                <a href={getWhatsAppLink()} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-3">
-                  <span className="whitespace-normal md:whitespace-nowrap">Démarrer avec Kaba-Fulfillment</span>
-                  <ArrowRight className="h-6 w-6 transition-transform duration-300 group-hover:translate-x-2" />
+                <a href={getWhatsAppLink()} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-1.5 lg:gap-3 text-center">
+                  <span>Démarrer avec Kaba-Fulfillment</span>
+                  <ArrowRight className="h-4 w-4 lg:h-6 lg:w-6 flex-shrink-0" />
                 </a>
               </Button>
             </div>
 
-            <div className="flex items-center justify-center order-first md:order-last w-full" ref={imageRef}>
+            {/* Image */}
+            <div className="flex items-center justify-center w-full mt-10 lg:mt-0" ref={imageRef}>
               {ctaImage && (
-                <div className="relative w-full max-w-lg aspect-square">
+                <div className="relative w-full max-w-[200px] sm:max-w-sm lg:max-w-lg aspect-square">
                   <div className="absolute -inset-6 bg-white/10 rounded-full blur-3xl opacity-50" />
-                  <div className="relative h-full w-full rounded-[3.5rem] overflow-hidden border-8 border-white/20 shadow-2xl">
+                  <div className="relative h-full w-full rounded-[2.5rem] lg:rounded-[3.5rem] overflow-hidden border-4 lg:border-8 border-white/20 shadow-2xl">
                     <Image
                       src={ctaImage.imageUrl}
                       alt={ctaImage.description}

@@ -28,7 +28,7 @@ export function Hero({
   return (
     <section
       id="nos-offres"
-      className="relative w-full flex items-center justify-center overflow-hidden"
+      className="relative w-full flex items-start md:items-center justify-center overflow-hidden"
       style={{ height: '100dvh', minHeight: '100dvh' }}
     >
       {/* Background image */}
@@ -46,23 +46,23 @@ export function Hero({
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/55" />
 
-      {/* Content — centred vertically, padded top for fixed navbar */}
-      <div className="container relative z-10 grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 text-primary-foreground px-5 sm:px-8 pt-20 pb-20 md:pt-0 md:pb-0">
+      {/* Content — starts below navbar on mobile, centred on desktop */}
+      <div className="container relative z-10 grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 text-primary-foreground px-5 sm:px-8 pt-32 pb-28 md:pt-0 md:pb-0">
 
         {/* Left / main content */}
         <div className="md:col-span-7 flex flex-col justify-center text-left">
 
           {/* Badge */}
-          <div className="flex items-center gap-3 mb-4 md:mb-8">
+          <div className="flex items-center gap-2 mb-4 md:mb-8">
             <Image
               src="/assets/icones/Pin.svg"
               alt="Zone UEMOA"
               width={24}
               height={24}
-              className="h-6 w-6 md:h-10 md:w-10 flex-shrink-0"
+              className="h-5 w-5 md:h-8 md:w-8 flex-shrink-0"
               style={{ filter: 'brightness(0) invert(1)' }}
             />
-            <span className="bg-primary/20 text-white px-4 py-1.5 rounded-full text-[10px] md:text-sm font-black tracking-[0.2em] uppercase border border-white/20 backdrop-blur-sm">
+            <span className="text-white text-[11px] md:text-base font-black tracking-[0.2em] uppercase">
               Zone UEMOA • Fulfillment By Kaba
             </span>
           </div>
@@ -75,26 +75,26 @@ export function Hero({
             </h2>
           </div>
 
-          {/* Offer specific content area with stable height to prevent CTA jumping */}
-          <div className="mt-8 md:mt-10 min-h-[320px] md:min-h-[450px] flex flex-col justify-start">
+          {/* Offer specific content area — no min-height on mobile to avoid empty space */}
+          <div className="mt-4 md:mt-10 md:min-h-[450px] flex flex-col justify-start">
             {/* Offer name */}
             <h1 className="font-headline text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black uppercase tracking-tighter leading-[0.85] text-white">
               {currentOffer.name}
             </h1>
             
             {/* Specific Subtitle (Message 1) */}
-            <h3 className="text-lg md:text-3xl font-black text-primary uppercase tracking-tighter leading-none mt-3 md:mt-4">
+            <h3 className="text-lg md:text-3xl font-black text-primary uppercase tracking-tighter leading-none mt-2 md:mt-4">
               {currentOffer.subtitle}
             </h3>
 
             {/* Specific Description (Message 2) */}
-            <p className="mt-5 md:mt-8 max-w-xl text-sm md:text-xl text-white font-medium leading-relaxed opacity-90 drop-shadow-lg">
+            <p className="mt-3 md:mt-8 max-w-xl text-sm md:text-xl text-white font-medium leading-relaxed opacity-90 drop-shadow-lg">
               {currentOffer.description}
             </p>
           </div>
 
-          {/* CTAs — Position is now locked horizontally and vertically */}
-          <div className="mt-6 md:mt-8 flex flex-wrap gap-4 md:gap-5">
+          {/* CTAs */}
+          <div className="mt-4 md:mt-8 flex flex-wrap gap-3 md:gap-5">
             <Button
               asChild
               size="lg"
@@ -127,7 +127,7 @@ export function Hero({
       </div>
 
       {/* Slide progress bars — visible on all screens */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex items-end gap-2 px-4" style={{ width: 'min(400px, 90vw)' }}>
+      <div className="absolute bottom-8 md:bottom-6 left-1/2 -translate-x-1/2 z-20 flex items-end gap-2 px-4" style={{ width: 'min(400px, 90vw)' }}>
         {Array.from({ length: totalOffers }).map((_, i) => (
           <div key={i} className="flex-1">
             {/* Track */}
