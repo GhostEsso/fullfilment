@@ -28,7 +28,7 @@ export function Hero({
   return (
     <section
       id="nos-offres"
-      className="relative w-full flex items-start md:items-center justify-center overflow-hidden"
+      className="relative w-full flex items-center justify-center overflow-hidden"
       style={{ height: '100dvh', minHeight: '100dvh' }}
     >
       {/* Background image */}
@@ -46,37 +46,38 @@ export function Hero({
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/55" />
 
-      {/* Content — starts below navbar on mobile, centred on desktop */}
-      <div className="container relative z-10 grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 text-primary-foreground px-5 sm:px-8 pt-32 pb-28 md:pt-0 md:pb-0">
+      {/* Content — spread vertically on mobile, centred on desktop */}
+      <div className="container relative z-10 grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 text-primary-foreground px-5 sm:px-8 h-full md:h-auto pt-20 pb-24 md:py-0">
 
         {/* Left / main content */}
-        <div className="md:col-span-7 flex flex-col justify-center text-left">
+        <div className="md:col-span-7 flex flex-col justify-between md:justify-center text-left h-full md:h-auto py-8 md:py-0">
+          
+          {/* TOP SECTION: Badge & Header */}
+          <div className="flex flex-col gap-4 md:gap-8 mt-4 md:mt-0">
+            {/* Badge */}
+            <div className="flex items-center gap-2">
+              <Image
+                src="/assets/icones/Pin.svg"
+                alt="Zone UEMOA"
+                width={24}
+                height={24}
+                className="h-5 w-5 md:h-8 md:w-8 flex-shrink-0"
+                style={{ filter: 'brightness(0) invert(1)' }}
+              />
+              <span className="text-white text-[11px] md:text-base font-black tracking-[0.2em] uppercase">
+                Zone UEMOA • Fulfillment By Kaba
+              </span>
+            </div>
 
-          {/* Badge */}
-          <div className="flex items-center gap-2 mb-4 md:mb-8">
-            <Image
-              src="/assets/icones/Pin.svg"
-              alt="Zone UEMOA"
-              width={24}
-              height={24}
-              className="h-5 w-5 md:h-8 md:w-8 flex-shrink-0"
-              style={{ filter: 'brightness(0) invert(1)' }}
-            />
-            <span className="text-white text-[11px] md:text-base font-black tracking-[0.2em] uppercase">
-              Zone UEMOA • Fulfillment By Kaba
-            </span>
-          </div>
-
-          {/* General Message (Header) */}
-          <div className="min-h-[80px] md:min-h-[100px] flex flex-col justify-end">
+            {/* General Message (Header) */}
             <h2 className="text-sm md:text-2xl font-bold text-white/70 tracking-tight leading-snug max-w-2xl">
               Solutions de Stockage, gestion de commandes et livraisons pour
               e-commerçants et entreprises mondiales.
             </h2>
           </div>
 
-          {/* Offer specific content area — no min-height on mobile to avoid empty space */}
-          <div className="mt-4 md:mt-10 md:min-h-[450px] flex flex-col justify-start">
+          {/* MIDDLE SECTION: Offer specific content */}
+          <div className="flex flex-col justify-center my-6 md:mt-10 md:min-h-[450px]">
             {/* Offer name */}
             <h1 className="font-headline text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black uppercase tracking-tighter leading-[0.85] text-white">
               {currentOffer.name}
@@ -93,8 +94,8 @@ export function Hero({
             </p>
           </div>
 
-          {/* CTAs */}
-          <div className="mt-4 md:mt-8 flex flex-wrap gap-3 md:gap-5">
+          {/* BOTTOM SECTION: CTAs */}
+          <div className="flex flex-wrap gap-3 md:gap-5 mb-4 md:mt-8">
             <Button
               asChild
               size="lg"
