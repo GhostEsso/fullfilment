@@ -1,5 +1,6 @@
 'use client';
 
+import * as React from 'react';
 import { offers, faqItems } from '@/lib/data';
 import type { ServiceOffer } from '@/lib/types';
 
