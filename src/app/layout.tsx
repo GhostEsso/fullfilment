@@ -110,8 +110,10 @@ export default function RootLayout({
     <html lang="fr" suppressHydrationWarning>
       <head>
         <script
+          id="business-schema"
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(businessSchema) }}
+          suppressHydrationWarning
         />
       </head>
       <body

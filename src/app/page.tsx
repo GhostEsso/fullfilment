@@ -47,12 +47,11 @@ export default function Home() {
 
   return (
     <div className="flex flex-col">
-      <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-        />
-      </head>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        key="faq-schema"
+      />
       <Hero
         currentOffer={currentOffer}
         currentOfferIndex={currentOfferIndex}
