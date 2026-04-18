@@ -13,28 +13,93 @@ const urbanist = Urbanist({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://fullfilment-eight.vercel.app'),
-  title: 'KABA Fulfillment - Logistique & Livraison en Zone UEMOA',
-  description:
-    'Solutions de stockage, gestion de commandes et livraison pour les e-commerçants. Kaba-Fulfillment optimise votre logistique en Côte d’Ivoire, Sénégal, Togo, Bénin.',
+  title: 'KABA Fulfillment – Logistique & Livraison en Zone UEMOA',
+  description: 'KABA Fulfillment gère le stockage, la préparation et la livraison de vos commandes à Lomé et en zone UEMOA. Vendez partout en Afrique de l\'Ouest, sans vous déplacer.',
   keywords: [
+    'fulfillment Togo',
+    'logistique UEMOA',
+    'livraison Lomé',
+    'e-commerce Afrique de l\'Ouest',
+    'stockage Lomé',
     'kaba-fulfillment',
     'kaba fulfillment',
-    'logistique e-commerce afrique',
-    'fulfillment togo',
-    'livraison uemoa',
-    'stockage e-commerce',
-    'gestion de commandes',
   ],
+  alternates: {
+    canonical: 'https://fullfilment-eight.vercel.app/',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
   openGraph: {
-    title: 'KABA Fulfillment - Logistique & Livraison en Zone UEMOA',
-    description: 'Optimisez votre logistique e-commerce avec Kaba-Fulfillment. Solutions de stockage et livraison régionales.',
-    images: ['/icon.png'],
+    title: 'KABA Fulfillment – Logistique & Livraison en Zone UEMOA',
+    description: 'KABA Fulfillment gère le stockage, la préparation et la livraison de vos commandes à Lomé et en zone UEMOA. Vendez partout en Afrique de l\'Ouest, sans vous déplacer.',
+    url: 'https://fullfilment-eight.vercel.app/',
+    siteName: 'KABA Fulfillment',
+    locale: 'fr_TG',
+    type: 'website',
+    images: [
+      {
+        url: '/assets/images/pic.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'KABA Fulfillment - Logistique & Livraison',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'KABA Fulfillment – Logistique & Livraison en Zone UEMOA',
+    description: 'KABA Fulfillment gère le stockage, la préparation et la livraison de vos commandes à Lomé et en zone UEMOA. Vendez partout en Afrique de l\'Ouest, sans vous déplacer.',
+    images: ['/assets/images/pic.jpg'],
   },
   icons: {
     icon: '/icon.png?v=1',
   },
 };
 
+const businessSchema = {
+  '@context': 'https://schema.org',
+  '@type': ['LocalBusiness', 'Service'],
+  'name': 'KABA Fulfillment',
+  'image': 'https://fullfilment-eight.vercel.app/assets/images/pic.jpg',
+  'description': 'KABA Fulfillment gère le stockage, la préparation et la livraison de vos commandes à Lomé et en zone UEMOA.',
+  'address': {
+    '@type': 'PostalAddress',
+    'streetAddress': '319 Rue AZIABOR, Agbalepedo',
+    'addressLocality': 'Lomé',
+    'addressCountry': 'TG',
+  },
+  'geo': {
+    '@type': 'GeoCoordinates',
+    'latitude': '6.1922',
+    'longitude': '1.2114',
+  },
+  'telephone': '+22892109474',
+  'email': 'contact@kaba-delivery.com',
+  'url': 'https://fullfilment-eight.vercel.app',
+  'areaServed': [
+    { '@type': 'Country', 'name': 'Togo' },
+    { '@type': 'Country', 'name': 'Côte d\'Ivoire' },
+    { '@type': 'Country', 'name': 'Bénin' },
+    { '@type': 'Country', 'name': 'Burkina Faso' }
+  ],
+  'priceRange': '1000 FCFA - 75000 FCFA/mois',
+  'openingHoursSpecification': {
+    '@type': 'OpeningHoursSpecification',
+    'dayOfWeek': [
+      'Monday',
+      'Tuesday',
+      'Wednesday',
+      'Thursday',
+      'Friday',
+      'Saturday',
+      'Sunday'
+    ],
+    'opens': '07:30',
+    'closes': '17:30'
+  }
+};
 
 export default function RootLayout({
   children,
@@ -43,28 +108,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" suppressHydrationWarning>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(businessSchema) }}
+        />
+      </head>
       <body
         className={`${urbanist.variable} font-sans antialiased`}
         suppressHydrationWarning
       >
           <Header />
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify({
-                '@context': 'https://schema.org',
-                '@type': 'LogisticsService',
-                'name': 'Kaba-Fulfillment',
-                'description': 'Solutions de stockage, gestion de commandes et livraison pour les e-commerçants en zone UEMOA.',
-                'url': 'https://fullfilment.kaba-delivery.com',
-                'address': {
-                  '@type': 'PostalAddress',
-                  'addressLocality': 'Lomé',
-                  'addressCountry': 'TG',
-                },
-              }),
-            }}
-          />
           <main className="pt-0">{children}</main>
           <Footer />
           <Toaster />

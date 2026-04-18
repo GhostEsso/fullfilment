@@ -1,7 +1,6 @@
 'use client';
 
-import * as React from 'react';
-import { offers } from '@/lib/data';
+import { offers, faqItems } from '@/lib/data';
 import type { ServiceOffer } from '@/lib/types';
 
 import { Hero } from '@/components/sections/hero';
@@ -16,6 +15,19 @@ import { Cta } from '@/components/sections/cta';
 export default function Home() {
   const [currentOfferIndex, setCurrentOfferIndex] = React.useState(0);
   const currentOffer: ServiceOffer = offers[currentOfferIndex];
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    'mainEntity': faqItems.map((item) => ({
+      '@type': 'Question',
+      'name': item.question,
+      'acceptedAnswer': {
+        '@type': 'Answer',
+        'text': item.answer,
+      },
+    })),
+  };
 
   const nextOffer = React.useCallback(() => {
     setCurrentOfferIndex((prev) => (prev + 1) % offers.length);
@@ -34,6 +46,12 @@ export default function Home() {
 
   return (
     <div className="flex flex-col">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      </head>
       <Hero
         currentOffer={currentOffer}
         currentOfferIndex={currentOfferIndex}
