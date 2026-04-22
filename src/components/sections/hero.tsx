@@ -28,7 +28,7 @@ export function Hero({
   return (
     <section
       id="nos-offres"
-      className="relative w-full flex items-center justify-center overflow-hidden"
+      className="relative w-full flex flex-col justify-start overflow-hidden"
       style={{ height: '100dvh', minHeight: '100dvh' }}
     >
       {/* Background image */}
@@ -46,11 +46,14 @@ export function Hero({
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/55" />
 
-      {/* Content — spread vertically on mobile, centred on desktop */}
-      <div className="container relative z-10 grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 text-primary-foreground px-5 sm:px-8 h-full md:h-auto pt-48 pb-20 md:pt-56 md:pb-32">
+      {/* Spacer for Fixed Header */}
+      <div className="h-20 md:h-32 w-full shrink-0" />
+
+      {/* Content */}
+      <div className="container relative z-10 grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 text-primary-foreground px-5 sm:px-8 pb-20 md:pb-32">
 
         {/* Left / main content */}
-        <div className="md:col-span-7 flex flex-col justify-start md:justify-center text-left h-full md:h-auto py-4 md:py-0">
+        <div className="md:col-span-7 flex flex-col justify-start md:justify-center text-left py-4 md:py-0">
           
           {/* TOP SECTION: Badge & Header */}
           <div className="flex flex-col gap-3 md:gap-8 mt-4 md:mt-0">
