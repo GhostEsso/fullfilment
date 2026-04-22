@@ -102,8 +102,6 @@ const businessSchema = {
   }
 };
 
-import { CookieBanner } from '@/components/ui/cookie-banner';
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -124,7 +122,6 @@ export default function RootLayout({
         suppressHydrationWarning
       >
           <Header />
-          <CookieBanner />
           <main className="pt-0">{children}</main>
           <WhatsAppFloatingButton />
           <Footer />
