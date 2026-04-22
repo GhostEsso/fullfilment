@@ -28,8 +28,7 @@ export function Hero({
   return (
     <section
       id="nos-offres"
-      className="relative w-full flex flex-col justify-start overflow-hidden"
-      style={{ height: '100dvh', minHeight: '100dvh' }}
+      className="relative min-h-screen w-full flex flex-col items-start justify-start overflow-hidden pt-20 md:pt-32"
     >
       {/* Background image */}
       {heroImage && (
@@ -46,8 +45,7 @@ export function Hero({
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/55" />
 
-      {/* Spacer for Fixed Header - Increased to ensure no overlap */}
-      <div className="h-[160px] md:h-[240px] w-full shrink-0" />
+
 
       {/* Content */}
       <div className="container relative z-10 grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 text-primary-foreground px-5 sm:px-8 pb-20 md:pb-32">
