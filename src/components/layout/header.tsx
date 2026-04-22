@@ -48,17 +48,23 @@ export function Header() {
       )}
     >
       <div className="container mx-auto px-6 sm:px-8 flex items-center justify-between h-14 md:h-20">
-        <Link href="/" className="flex items-center gap-2 group relative z-[10001] flex-shrink-0">
+        <Link href="/" className="flex flex-col items-start gap-0 group relative z-[10001] flex-shrink-0">
           <Image 
-            src="/assets/logo.png" 
-            alt="Kaba-Fulfillment - Logistique e-commerce" 
+            src="/assets/Logo_cercle_rouge-titré.png" 
+            alt="Kaba Fulfillment - Logistique e-commerce" 
             width={180} 
             height={60} 
             className={cn(
               "w-auto object-contain transition-all duration-500",
-              isScrolled ? "h-8 md:h-10" : "h-10 md:h-14"
+              isScrolled ? "h-10 md:h-12" : "h-14 md:h-20"
             )}
           />
+          <span className={cn(
+            "text-[9px] md:text-[11px] font-black uppercase tracking-[0.2em] transition-all duration-500 mt-1",
+            isScrolled ? "text-primary/80" : "text-white/60"
+          )}>
+            Solutions de Stockage & Livraison
+          </span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -79,22 +85,6 @@ export function Header() {
           ))}
         </nav>
 
-        {/* Action Button (Desktop Only) */}
-        <div className="hidden md:flex items-center">
-          <Button 
-            asChild
-            className={cn(
-              "rounded-full px-8 h-11 font-black uppercase tracking-widest text-[11px] transition-all duration-500 shadow-xl hover:scale-105 active:scale-95",
-              isScrolled 
-                ? "bg-primary text-white hover:bg-primary/90 shadow-primary/20" 
-                : "bg-white text-primary hover:bg-white/90 shadow-white/20"
-            )}
-          >
-            <a href={getWhatsAppLink()} target="_blank" rel="noopener noreferrer">
-              Démarrer
-            </a>
-          </Button>
-        </div>
 
         {/* Mobile Menu Toggle */}
         <div className="flex items-center md:hidden relative z-[10001]">
@@ -134,19 +124,6 @@ export function Header() {
               </Link>
             ))}
             
-            <div className={cn(
-                "w-full mt-6 transition-all duration-500 delay-300",
-                isMobileMenuOpen ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-            )}>
-                <Button 
-                    asChild
-                    className="w-full bg-primary text-white h-14 rounded-2xl tracking-[0.2em] text-xs font-black uppercase shadow-2xl shadow-primary/30"
-                >
-                    <a href={getWhatsAppLink()} target="_blank" rel="noopener noreferrer">
-                        Démarrer Maintenant
-                    </a>
-                </Button>
-            </div>
           </nav>
         </div>
       </div>

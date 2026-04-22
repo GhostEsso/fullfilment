@@ -50,15 +50,15 @@ export function Location() {
     <section id="location" className="relative py-24 md:py-32 overflow-hidden bg-white" ref={containerRef}>
       {/* Background Decor */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[140px] pointer-events-none" />
-      
+
       <div className="container relative z-10">
         {/* Unified Card Container */}
-        <div 
+        <div
           ref={contentRef}
           className="bg-white/60 backdrop-blur-xl rounded-[3rem] md:rounded-[4rem] border border-white shadow-[0_40px_100px_rgba(0,0,0,0.08)] overflow-hidden"
         >
           <div className="grid md:grid-cols-2">
-            
+
             {/* Image Side */}
             <div className="relative min-h-[400px] md:min-h-full" ref={imageRef}>
               {locationImage && (

@@ -8,13 +8,7 @@ import { Quote } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
-// Direction map: repeats every 4 cards
-const FROM_DIRS = [
-  { x: -120, y: 0 },   // card 1 → from left
-  { x: 0,   y: 120 },  // card 2 → from bottom
-  { x: 120,  y: 0 },   // card 3 → from right
-  { x: 0,   y: -120 }, // card 4 → from top
-];
+
 
 export function Testimonials() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -34,62 +28,29 @@ export function Testimonials() {
       },
     });
 
-    // --- Set cards invisible initially ---
-    const cards = gsap.utils.toArray<HTMLElement>('.testimonial-card');
-    cards.forEach((card, i) => {
-      const dir = FROM_DIRS[i % 4];
-      gsap.set(card, { x: dir.x, y: dir.y, opacity: 0, scale: 0.85 });
-    });
-
-    // --- ScrollTrigger.batch: the official GSAP way ---
-    // Fires onEnter for all cards that enter the viewport within the interval,
-    // then animates them as a group with a stagger.
-    ScrollTrigger.batch('.testimonial-card', {
-      interval: 0.15,            // collect cards entering within 150ms
-      batchMax: 3,               // max 3 per batch (matches 3-col grid)
-      start: 'top 90%',
-
-      onEnter: (batch) => {
-        gsap.to(batch, {
-          opacity: 1,
-          x: 0,
-          y: 0,
-          scale: 1,
-          duration: 0.9,
-          ease: 'power3.out',
-          stagger: { each: 0.15, grid: [1, 3] },
-          overwrite: true,
-        });
+    // --- Cards Staggered Reveal ---
+    const cards = gsap.utils.toArray('.testimonial-card');
+    
+    gsap.fromTo(cards, 
+      {
+        y: 60,
+        opacity: 0,
+        scale: 0.9,
       },
-
-      onLeave: (batch) =>
-        gsap.set(batch, { opacity: 0, overwrite: true }),
-
-      onEnterBack: (batch) =>
-        gsap.to(batch, {
-          opacity: 1,
-          x: 0,
-          y: 0,
-          scale: 1,
-          duration: 0.7,
-          ease: 'power3.out',
-          stagger: 0.12,
-          overwrite: true,
-        }),
-
-      onLeaveBack: (batch) => {
-        batch.forEach((card) => {
-          const i = cards.indexOf(card as HTMLElement);
-          const dir = FROM_DIRS[i % 4];
-          gsap.set(card, { x: dir.x, y: dir.y, opacity: 0, overwrite: true });
-        });
-      },
-    });
-
-    // Resetting y:0 before ScrollTrigger refresh so position calcs are accurate
-    ScrollTrigger.addEventListener('refreshInit', () => {
-      gsap.set('.testimonial-card', { clearProps: 'transform' });
-    });
+      {
+        y: 0,
+        opacity: 1,
+        scale: 1,
+        duration: 1.2,
+        ease: 'power4.out',
+        stagger: 0.15,
+        scrollTrigger: {
+          trigger: '.testimonial-grid',
+          start: 'top 80%',
+          toggleActions: 'play none none none',
+        }
+      }
+    );
   }, { scope: containerRef });
 
   return (
@@ -110,12 +71,12 @@ export function Testimonials() {
             Des entreprises qui <span className="text-primary">prospèrent</span> avec nous.
           </h2>
           <p className="mt-4 text-xl text-muted-foreground font-medium">
-            Découvrez comment Kaba-Fulfillment aide les marques à conquérir le marché togolais.
+            Découvrez comment Kaba Fulfillment aide les marques à conquérir le marché togolais.
           </p>
         </div>
 
         {/* Testimonials Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="testimonial-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((t, i) => (
             <div
               key={i}

@@ -60,7 +60,7 @@ export function WhyKaba() {
              Expertise & Performance
           </div>
           <h2 className="text-4xl font-black tracking-tighter sm:text-6xl text-foreground font-headline leading-[1.05]">
-            Pourquoi propulser votre business avec <span className="text-primary">Kaba-Fulfillment</span> ?
+            Pourquoi propulser votre business avec <span className="text-primary">Kaba Fulfillment</span> ?
           </h2>
           <p className="mt-6 text-xl text-muted-foreground font-medium max-w-2xl">
             Bien plus qu'un prestataire, nous devenons le moteur de votre croissance sur le marché africain.
@@ -110,11 +110,10 @@ export function WhyKaba() {
         <div className="mt-16 md:mt-20 flex justify-center px-4">
           <Button 
             asChild 
-            size="lg" 
-            className="h-auto min-h-[3.5rem] py-4 md:h-16 px-6 md:px-12 text-sm md:text-lg font-black uppercase tracking-normal md:tracking-widest rounded-2xl shadow-[0_20px_40px_rgba(225,29,72,0.2)] hover:scale-[1.05] transition-all duration-300 w-full md:w-auto leading-tight whitespace-normal md:whitespace-nowrap"
+            className="h-12 md:h-14 px-8 md:px-12 text-[10px] md:text-[11px] font-bold uppercase tracking-widest rounded-full shadow-md hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 w-full md:w-auto leading-tight whitespace-normal md:whitespace-nowrap"
           >
             <a href={getWhatsAppLink()} target="_blank" rel="noopener noreferrer" className="text-center">
-              Exploser votre croissance dès aujourd'hui
+              Vendez au Togo maintenant avec Kaba
             </a>
           </Button>
         </div>

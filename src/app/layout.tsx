@@ -4,6 +4,7 @@ import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
+import { WhatsAppFloatingButton } from '@/components/ui/whatsapp-button';
 
 const urbanist = Urbanist({
   subsets: ['latin'],
@@ -13,16 +14,16 @@ const urbanist = Urbanist({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://fullfilment-eight.vercel.app'),
-  title: 'KABA Fulfillment – Logistique & Livraison en Zone UEMOA',
-  description: 'KABA Fulfillment gère le stockage, la préparation et la livraison de vos commandes à Lomé et en zone UEMOA. Vendez partout en Afrique de l\'Ouest, sans vous déplacer.',
+  title: 'Kaba Fulfillment – Logistique & Livraison en Zone UEMOA',
+  description: 'Kaba Fulfillment gère le stockage, la préparation et la livraison de vos commandes à Lomé et en zone UEMOA. Vendez partout en Afrique de l\'Ouest, sans vous déplacer.',
   keywords: [
     'fulfillment Togo',
     'logistique UEMOA',
     'livraison Lomé',
     'e-commerce Afrique de l\'Ouest',
     'stockage Lomé',
-    'kaba-fulfillment',
     'kaba fulfillment',
+    'kaba logistique',
   ],
   alternates: {
     canonical: 'https://fullfilment-eight.vercel.app/',
@@ -32,10 +33,10 @@ export const metadata: Metadata = {
     follow: true,
   },
   openGraph: {
-    title: 'KABA Fulfillment – Logistique & Livraison en Zone UEMOA',
-    description: 'KABA Fulfillment gère le stockage, la préparation et la livraison de vos commandes à Lomé et en zone UEMOA. Vendez partout en Afrique de l\'Ouest, sans vous déplacer.',
+    title: 'Kaba Fulfillment – Logistique & Livraison en Zone UEMOA',
+    description: 'Kaba Fulfillment gère le stockage, la préparation et la livraison de vos commandes à Lomé et en zone UEMOA. Vendez partout en Afrique de l\'Ouest, sans vous déplacer.',
     url: 'https://fullfilment-eight.vercel.app/',
-    siteName: 'KABA Fulfillment',
+    siteName: 'Kaba Fulfillment',
     locale: 'fr_TG',
     type: 'website',
     images: [
@@ -43,14 +44,14 @@ export const metadata: Metadata = {
         url: '/assets/images/pic.jpg',
         width: 1200,
         height: 630,
-        alt: 'KABA Fulfillment - Logistique & Livraison',
+        alt: 'Kaba Fulfillment - Logistique & Livraison',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'KABA Fulfillment – Logistique & Livraison en Zone UEMOA',
-    description: 'KABA Fulfillment gère le stockage, la préparation et la livraison de vos commandes à Lomé et en zone UEMOA. Vendez partout en Afrique de l\'Ouest, sans vous déplacer.',
+    title: 'Kaba Fulfillment – Logistique & Livraison en Zone UEMOA',
+    description: 'Kaba Fulfillment gère le stockage, la préparation et la livraison de vos commandes à Lomé et en zone UEMOA. Vendez partout en Afrique de l\'Ouest, sans vous déplacer.',
     images: ['/assets/images/pic.jpg'],
   },
   icons: {
@@ -61,9 +62,9 @@ export const metadata: Metadata = {
 const businessSchema = {
   '@context': 'https://schema.org',
   '@type': ['LocalBusiness', 'Service'],
-  'name': 'KABA Fulfillment',
+  'name': 'Kaba Fulfillment',
   'image': 'https://fullfilment-eight.vercel.app/assets/images/pic.jpg',
-  'description': 'KABA Fulfillment gère le stockage, la préparation et la livraison de vos commandes à Lomé et en zone UEMOA.',
+  'description': 'Kaba Fulfillment gère le stockage, la préparation et la livraison de vos commandes à Lomé et en zone UEMOA.',
   'address': {
     '@type': 'PostalAddress',
     'streetAddress': '319 Rue AZIABOR, Agbalepedo',
@@ -75,8 +76,8 @@ const businessSchema = {
     'latitude': '6.1922',
     'longitude': '1.2114',
   },
-  'telephone': '+22892109474',
-  'email': 'contact@kaba-delivery.com',
+  'telephone': '+228 70 69 42 06',
+  'email': 'infos@kabafulfillment.com',
   'url': 'https://fullfilment-eight.vercel.app',
   'areaServed': [
     { '@type': 'Country', 'name': 'Togo' },
@@ -122,6 +123,7 @@ export default function RootLayout({
       >
           <Header />
           <main className="pt-0">{children}</main>
+          <WhatsAppFloatingButton />
           <Footer />
           <Toaster />
       </body>

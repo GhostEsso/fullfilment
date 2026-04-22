@@ -47,7 +47,7 @@ export function Hero({
       <div className="absolute inset-0 bg-black/55" />
 
       {/* Content — spread vertically on mobile, centred on desktop */}
-      <div className="container relative z-10 grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 text-primary-foreground px-5 sm:px-8 h-full md:h-auto pt-20 pb-24 md:py-0">
+      <div className="container relative z-10 grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 text-primary-foreground px-5 sm:px-8 h-full md:h-auto pt-32 pb-24 md:pt-40 md:pb-32">
 
         {/* Left / main content */}
         <div className="md:col-span-7 flex flex-col justify-between md:justify-center text-left h-full md:h-auto py-8 md:py-0">
@@ -65,22 +65,27 @@ export function Hero({
                 style={{ filter: 'brightness(0) invert(1)' }}
               />
               <span className="text-white text-[11px] md:text-base font-black tracking-[0.2em] uppercase">
-                Zone UEMOA • Fulfillment By Kaba
+                Zone UEMOA • Kaba Fulfillment
               </span>
             </div>
 
             {/* General Message (Header) */}
-            <h2 className="text-sm md:text-2xl font-bold text-white/70 tracking-tight leading-snug max-w-2xl">
+            <h2 className="text-2xl md:text-4xl lg:text-5xl font-black text-white tracking-tight leading-[1.1] max-w-2xl font-headline">
+              Vendez au Togo maintenant avec Kaba.
+            </h2>
+            <p className="text-sm md:text-lg font-bold text-white/70 tracking-tight leading-snug max-w-xl">
               Solutions de Stockage, gestion de commandes et livraisons pour
               e-commerçants et entreprises mondiales.
-            </h2>
+            </p>
           </div>
 
           {/* MIDDLE SECTION: Offer specific content */}
-          <div className="flex flex-col justify-center my-6 md:mt-10 md:min-h-[450px]">
-            {/* Offer name */}
+          <div className="flex flex-col justify-center my-6 md:mt-10 md:min-h-[350px]">
             <h1 className="font-headline text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black uppercase tracking-tighter leading-[0.85] text-white">
               {currentOffer.name}
+              <span className="block mt-2 text-2xl md:text-4xl lg:text-5xl font-black text-white/40 normal-case tracking-normal">
+                ({currentOffer.price.toLowerCase() === 'sur devis' ? 'sur mesure' : currentOffer.price.split(' /')[0].toLowerCase()})
+              </span>
             </h1>
             
             {/* Specific Subtitle (Message 1) */}
@@ -98,8 +103,7 @@ export function Hero({
           <div className="flex flex-wrap gap-3 md:gap-5 mb-4 md:mt-8">
             <Button
               asChild
-              size="lg"
-              className="bg-primary hover:bg-primary/90 text-white px-8 md:px-10 h-12 md:h-14 font-black text-sm md:text-lg uppercase tracking-widest shadow-2xl shadow-primary/40 transition-all hover:scale-105"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 md:px-10 h-12 md:h-14 rounded-full font-bold text-[10px] md:text-[11px] uppercase tracking-widest shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5"
             >
               <a href={getWhatsAppLink(currentOffer.name)} target="_blank" rel="noopener noreferrer">
                 Choisir cette offre
@@ -107,9 +111,8 @@ export function Hero({
             </Button>
             <Button
               asChild
-              size="lg"
               variant="outline"
-              className="border-white/20 text-white bg-white/5 backdrop-blur-md hover:bg-white hover:text-black px-8 md:px-10 h-12 md:h-14 font-black text-sm md:text-lg uppercase tracking-widest transition-all"
+              className="border-white/20 text-white bg-white/5 backdrop-blur-md hover:bg-white hover:text-black rounded-full px-8 md:px-10 h-12 md:h-14 font-bold text-[10px] md:text-[11px] uppercase tracking-widest transition-all duration-300 hover:-translate-y-0.5"
             >
               <a href="#tarifs">Nos Offres</a>
             </Button>

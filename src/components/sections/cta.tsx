@@ -61,20 +61,20 @@ export function Cta() {
                  C'est le moment d'agir
               </div>
               <h2 className="text-2xl sm:text-4xl lg:text-6xl font-black font-headline tracking-tighter leading-[1.1] text-balance">
-                Prêt à <span className="text-white/80">optimiser</span> votre logistique ?
+                Prêts à <span className="text-white/80">ouvrir</span> votre business au marché Togolais ?
               </h2>
               <p className="mt-4 text-sm sm:text-lg text-white/90 font-medium leading-relaxed max-w-sm sm:max-w-xl">
-                Rejoignez les e-commerçants qui nous font confiance. Simplifiez vos opérations et accélérez votre croissance dès aujourd'hui.
+                Rejoignez les e-commerçants et entreprises qui nous font confiance. Simplifiez vos opérations et accélérez votre croissance dès aujourd'hui.
               </p>
               
               <Button 
                 size="lg" 
-                className="mt-6 lg:mt-10 bg-white text-primary hover:bg-white/95 w-full sm:w-fit h-auto min-h-[3rem] py-3 lg:h-16 px-2 sm:px-10 rounded-[1.25rem] lg:rounded-[1.5rem] text-[11px] sm:text-base lg:text-xl font-black uppercase tracking-wider shadow-2xl transition-all duration-300 hover:scale-[1.02] whitespace-normal lg:whitespace-nowrap leading-tight" 
+                className="mt-6 lg:mt-10 bg-white text-primary hover:bg-white/95 w-full sm:w-fit h-12 md:h-14 px-6 md:px-10 rounded-full text-[10px] md:text-[11px] font-bold uppercase tracking-widest shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5 whitespace-normal lg:whitespace-nowrap leading-tight group/btn" 
                 asChild
               >
                 <a href={getWhatsAppLink()} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-1.5 lg:gap-3 text-center">
-                  <span>Démarrer avec Kaba-Fulfillment</span>
-                  <ArrowRight className="h-4 w-4 lg:h-6 lg:w-6 flex-shrink-0" />
+                  <span>Démarrer avec Kaba Fulfillment</span>
+                  <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover/btn:translate-x-1" />
                 </a>
               </Button>
             </div>

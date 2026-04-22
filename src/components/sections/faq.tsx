@@ -19,7 +19,7 @@ export function Faq() {
              Aide &amp; Support
           </div>
           <h2 className="text-4xl font-black font-headline tracking-tighter sm:text-5xl text-foreground leading-[1.1]">
-            Tout savoir sur <span className="text-primary underline underline-offset-8 decoration-primary/20">Kaba-Fulfillment</span>
+            Tout savoir sur <span className="text-primary underline underline-offset-8 decoration-primary/20">Kaba Fulfillment</span>
           </h2>
           <p className="mt-4 text-xl text-foreground/70 font-medium max-w-2xl mx-auto">
             Nous avons compilé les réponses aux questions les plus fréquentes pour vous aider à démarrer rapidement.

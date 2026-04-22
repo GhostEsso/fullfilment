@@ -118,7 +118,40 @@ export const offers: ServiceOffer[] = [
   },
   {
     id: 4,
-    name: 'Offre 4 (Sur mesure)',
+    name: 'Offre 4',
+    subtitle: 'Forfait mensuel tout compris, sans livraison gratuite.',
+    description: 'Gérez vos volumes sans frais de livraison offerts.',
+    longDescription:
+      'Une solution pour les gros volumes où vous gérez votre propre politique de livraison client. Nous gérons le stockage et la préparation.',
+    price: '50 000 FCFA / mois',
+    priceDetails: [
+      { label: 'Abonnement mensuel', value: '50 000 FCFA' },
+      { label: 'Livraison Lomé', value: 'À la charge du client' },
+      { label: 'Stockage & Emballage', value: 'Inclus' },
+      { label: 'App de Suivi', value: 'Inclus' },
+    ],
+    features: [
+      {
+        icon: Clock,
+        title: 'Gestion Volume',
+        description: 'Idéal pour les commerçants ayant plus de 50 livraisons par mois.',
+      },
+      {
+        icon: Warehouse,
+        title: 'Entreposage',
+        description: 'Espace de stockage dédié pour votre inventaire.',
+      },
+      {
+        icon: Smartphone,
+        title: 'App Kaba',
+        description: 'Accès complet à l\'application de gestion Kaba.',
+      },
+    ],
+    backgroundImage: 'https://images.unsplash.com/photo-1590633717245-731362f72675?auto=format&fit=crop&q=80&w=1920',
+  },
+  {
+    id: 5,
+    name: 'Offre 5',
     subtitle: 'Kaba vous ouvre le marché togolais. Dites à vos clients que vous vendez maintenant au Togo.',
     description: 'Nous vous faisons une offre sur mesure, adaptée à vos réalités.',
     longDescription:

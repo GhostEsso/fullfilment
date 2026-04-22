@@ -3,7 +3,7 @@
     {
       "id": "hero-offer-1",
       "description": "Fulfillment services overview",
-      "imageUrl": "/assets/images/pic.jpg",
+      "imageUrl": "/assets/images/hero_fulfillment_kaba.png",
       "imageHint": "warehouse logistics"
     },
     {
@@ -38,8 +38,8 @@
     },
     {
       "id": "location-pickup",
-      "description": "The customer pickup area at the KABA DELIVERY point of sale in Lomé.",
-      "imageUrl": "/assets/images/pic4.jpg",
+      "description": "Une conseillère logistique souriante en pleine conversation avec un client à Lomé.",
+      "imageUrl": "/assets/images/advisor.png",
       "imageHint": "customer service"
     },
     {

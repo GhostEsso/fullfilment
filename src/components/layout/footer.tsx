@@ -1,7 +1,19 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Facebook, Instagram, Linkedin, MapPin } from 'lucide-react';
+import { Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+
+// TikTok Icon SVG
+const TikTokIcon = ({ className }: { className?: string }) => (
+  <svg 
+    viewBox="0 0 24 24" 
+    fill="currentColor" 
+    className={className}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.06-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.03 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-3.4 2.97-6.28 6.37-6.48 1.06-.06 2.1.14 3.08.55v4.03c-.58-.34-1.2-.52-1.88-.54-1.52-.07-2.98.71-3.64 2.08-.45.95-.53 2.09-.2 3.07.35 1.06 1.25 1.89 2.29 2.18.88.25 1.83.15 2.66-.25.93-.45 1.58-1.4 1.73-2.43.04-.3.05-.6.05-.91.02-4.33 0-8.66.02-12.99z"/>
+  </svg>
+);
 
 export function Footer() {
   return (
@@ -15,23 +27,30 @@ export function Footer() {
           {/* Brand Column */}
           <div className="lg:col-span-5">
             <Link href="/" className="inline-block mb-6 group">
-              <Image 
-                src="/assets/logo.png" 
-                alt="Kaba-Fulfillment - Votre partenaire logistique" 
-                width={180} 
-                height={50} 
-                className="h-12 md:h-16 w-auto object-contain transition-transform duration-500 group-hover:scale-105"
-              />
+              <div className="flex flex-col items-start gap-1">
+                <Image 
+                  src="/assets/Logo_cercle_rouge-titré.png" 
+                  alt="Kaba Fulfillment - Votre partenaire logistique" 
+                  width={200} 
+                  height={70} 
+                  className="h-16 md:h-20 w-auto object-contain transition-transform duration-500 group-hover:scale-105"
+                />
+                <span className="text-[10px] md:text-xs font-black uppercase tracking-[0.2em] text-foreground/40">
+                  Solutions de Stockage & Livraison
+                </span>
+              </div>
             </Link>
             <p className="text-lg leading-relaxed max-w-md font-medium text-foreground/60">
-              Simplifiez votre logistique africaine. Nous gérons le stockage, la préparation et la livraison pour votre croissance.
+              E-commerce & Logistique depuis 2019. Vendez, Kaba gère votre logistique.
             </p>
             
-            <div className="flex gap-3 mt-6">
+            <div className="flex flex-wrap gap-3 mt-6">
               {[
                 { icon: Facebook, href: "https://web.facebook.com/kabadelivery" },
                 { icon: Instagram, href: "https://www.instagram.com/kaba_delivery/" },
-                { icon: Linkedin, href: "https://www.linkedin.com/company/kaba-delivery-sarl/posts/?feedView=all" }
+                { icon: Linkedin, href: "https://www.linkedin.com/company/kaba-delivery-sarl/posts/?feedView=all" },
+                { icon: Twitter, href: "https://x.com/kaba_delivery" },
+                { icon: TikTokIcon, href: "https://www.tiktok.com/@kaba_delivery" }
               ].map((social, idx) => (
                 <a 
                   key={idx}
@@ -85,11 +104,11 @@ export function Footer() {
               </div>
               
               <div className="space-y-2 pt-4 border-t border-black/5">
-                <a href="tel:+22892109474" className="block text-xl font-black text-foreground hover:text-primary transition-all">
-                  +228 92 10 94 74
+                <a href="tel:+22870694206" className="block text-xl font-black text-foreground hover:text-primary transition-all">
+                  +228 70 69 42 06
                 </a>
-                <a href="mailto:contact@kaba-delivery.com" className="block text-base hover:text-primary transition-colors">
-                  contact@kaba-delivery.com
+                <a href="mailto:infos@kabafulfillment.com" className="block text-base hover:text-primary transition-colors">
+                  infos@kabafulfillment.com
                 </a>
               </div>
             </div>
@@ -99,7 +118,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-black/5 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-xs font-medium">
-            &copy; {new Date().getFullYear()} Kaba-Fulfillment.
+            &copy; {new Date().getFullYear()} Kaba Fulfillment.
           </p>
           <div className="flex gap-6 text-xs font-semibold">
             <Link href="/mentions-legales" className="hover:text-primary transition-colors">Mentions Légales</Link>
