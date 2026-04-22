@@ -56,11 +56,11 @@ export function Header() {
             height={60} 
             className={cn(
               "w-auto object-contain transition-all duration-500",
-              isScrolled ? "h-8 md:h-10" : "h-11 md:h-14"
+              isScrolled ? "h-7 md:h-9" : "h-9 md:h-12"
             )}
           />
           <span className={cn(
-            "text-[8px] md:text-[10px] font-black uppercase tracking-[0.2em] transition-all duration-500 mt-0.5",
+            "text-[7px] md:text-[9px] font-black uppercase tracking-[0.2em] transition-all duration-500 mt-0.5",
             isScrolled ? "text-primary/80" : "text-white/60"
           )}>
             Solutions de Stockage & Livraison

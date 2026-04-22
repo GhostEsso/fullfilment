@@ -47,13 +47,13 @@ export function Hero({
       <div className="absolute inset-0 bg-black/55" />
 
       {/* Content — spread vertically on mobile, centred on desktop */}
-      <div className="container relative z-10 grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 text-primary-foreground px-5 sm:px-8 h-full md:h-auto pt-44 pb-24 md:pt-52 md:pb-32">
+      <div className="container relative z-10 grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 text-primary-foreground px-5 sm:px-8 h-full md:h-auto pt-48 pb-20 md:pt-56 md:pb-32">
 
         {/* Left / main content */}
-        <div className="md:col-span-7 flex flex-col justify-between md:justify-center text-left h-full md:h-auto py-8 md:py-0">
+        <div className="md:col-span-7 flex flex-col justify-start md:justify-center text-left h-full md:h-auto py-4 md:py-0">
           
           {/* TOP SECTION: Badge & Header */}
-          <div className="flex flex-col gap-4 md:gap-8 mt-8 md:mt-0">
+          <div className="flex flex-col gap-3 md:gap-8 mt-4 md:mt-0">
             {/* Badge */}
             <div className="flex items-center gap-2">
               <Image
