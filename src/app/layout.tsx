@@ -57,6 +57,9 @@ export const metadata: Metadata = {
   icons: {
     icon: '/icon.png?v=1',
   },
+  verification: {
+    google: 'usuYYrqEbrDznJdgGRIPVouB0tWzOacMlzDGRJ1k8oI',
+  },
 };
 
 const businessSchema = {
