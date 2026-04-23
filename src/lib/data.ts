@@ -294,6 +294,12 @@ export const faqItems = [
     answer:
       'Un contrat est signé avec chaque partenaire, définissant les responsabilités. Kaba garantit la sécurité de vos stocks (hors cas de force majeure).',
   },
+  {
+    value: 'item-12',
+    question: 'Puis-je commander depuis la Chine pour Kaba au Togo?',
+    answer:
+      'Oui, vous pouvez commandez sur Alibaba ou autres et expédier vos marchandises à Kaba directement au Togo. Nous disposons d\'un entrepôt en Chine, d\'un service de fret et cargo en interne, qui nous permet de recevoir vos stocks depuis la Chine, en maximum 45 jours par bateau.',
+  },
 ];
 
 export const testimonials = [
