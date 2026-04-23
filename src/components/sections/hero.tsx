@@ -28,7 +28,7 @@ export function Hero({
   return (
     <section
       id="nos-offres"
-      className="relative min-h-screen w-full flex flex-col items-start justify-start overflow-hidden pt-20 md:pt-24"
+      className="relative min-h-screen w-full flex flex-col items-start justify-start overflow-hidden pt-20"
     >
       {/* Background image */}
       {heroImage && (
@@ -48,7 +48,7 @@ export function Hero({
 
 
       {/* Content */}
-      <div className="container relative z-10 grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 text-primary-foreground px-5 sm:px-8 pb-20 md:pb-32">
+      <div className="container relative z-10 grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 text-primary-foreground px-5 sm:px-8 pb-20 md:pb-16">
 
         {/* Left / main content */}
         <div className="md:col-span-7 flex flex-col justify-start md:justify-center text-left py-4 md:py-0">
@@ -71,7 +71,7 @@ export function Hero({
             </div>
 
             {/* General Message (Header) */}
-            <h2 className="text-2xl md:text-3xl lg:text-5xl font-black text-white tracking-tight leading-[1.1] max-w-2xl font-headline">
+            <h2 className="text-2xl md:text-xl lg:text-5xl font-black text-white tracking-tight leading-[1.1] max-w-2xl font-headline">
               Vendez au Togo maintenant avec Kaba.
             </h2>
             <p className="text-sm md:text-lg font-bold text-white/70 tracking-tight leading-snug max-w-xl">
@@ -81,30 +81,30 @@ export function Hero({
           </div>
 
           {/* MIDDLE SECTION: Offer specific content */}
-          <div className="flex flex-col justify-center my-6 md:mt-6 md:min-h-[250px]">
-            <h1 className="font-headline text-4xl sm:text-5xl md:text-5xl lg:text-8xl font-black uppercase tracking-tighter leading-[0.85] text-white">
+          <div className="flex flex-col justify-center my-6 md:mt-4 md:min-h-[200px]">
+            <h1 className="font-headline text-4xl sm:text-5xl md:text-4xl lg:text-8xl font-black uppercase tracking-tighter leading-[0.85] text-white">
               {currentOffer.name}
-              <span className="block mt-2 text-2xl md:text-3xl lg:text-5xl font-black text-white/40 normal-case tracking-normal">
+              <span className="block mt-2 text-2xl md:text-2xl lg:text-5xl font-black text-white/40 normal-case tracking-normal">
                 ({currentOffer.price.toLowerCase() === 'sur devis' ? 'sur mesure' : currentOffer.price.split(' /')[0].toLowerCase()})
               </span>
             </h1>
             
             {/* Specific Subtitle (Message 1) */}
-            <h3 className="text-lg md:text-2xl font-black text-primary uppercase tracking-tighter leading-none mt-2 md:mt-4">
+            <h3 className="text-lg md:text-xl font-black text-primary uppercase tracking-tighter leading-none mt-2 md:mt-4">
               {currentOffer.subtitle}
             </h3>
 
             {/* Specific Description (Message 2) */}
-            <p className="mt-3 md:mt-6 max-w-xl text-sm md:text-lg text-white font-medium leading-relaxed opacity-90 drop-shadow-lg">
+            <p className="mt-3 md:mt-4 max-w-xl text-sm md:text-base text-white font-medium leading-relaxed opacity-90 drop-shadow-lg">
               {currentOffer.description}
             </p>
           </div>
 
           {/* BOTTOM SECTION: CTAs */}
-          <div className="flex flex-wrap gap-3 md:gap-5 mb-4 md:mt-6">
+          <div className="flex flex-wrap gap-3 md:gap-5 mb-4 md:mt-4">
             <Button
               asChild
-              className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 md:px-10 h-12 md:h-14 rounded-full font-bold text-[10px] md:text-[11px] uppercase tracking-widest shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 md:px-10 h-12 md:h-12 rounded-full font-bold text-[10px] md:text-[11px] uppercase tracking-widest shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5"
             >
               <a href={getWhatsAppLink(currentOffer.name)} target="_blank" rel="noopener noreferrer">
                 Choisir cette offre
@@ -113,7 +113,7 @@ export function Hero({
             <Button
               asChild
               variant="outline"
-              className="border-white/20 text-white bg-white/5 backdrop-blur-md hover:bg-white hover:text-black rounded-full px-8 md:px-10 h-12 md:h-14 font-bold text-[10px] md:text-[11px] uppercase tracking-widest transition-all duration-300 hover:-translate-y-0.5"
+              className="border-white/20 text-white bg-white/5 backdrop-blur-md hover:bg-white hover:text-black rounded-full px-8 md:px-10 h-12 md:h-12 font-bold text-[10px] md:text-[11px] uppercase tracking-widest transition-all duration-300 hover:-translate-y-0.5"
             >
               <a href="#tarifs">Nos Offres</a>
             </Button>
