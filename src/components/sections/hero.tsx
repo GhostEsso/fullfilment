@@ -101,7 +101,7 @@ export function Hero({
           </div>
 
           {/* BOTTOM SECTION: CTAs */}
-          <div className="flex flex-wrap gap-3 md:gap-5 mb-4 mt-12 md:mt-16">
+          <div className="flex flex-wrap gap-3 md:gap-5 mb-4 mt-20 md:mt-16">
             <Button
               asChild
               className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 md:px-10 h-12 md:h-12 rounded-full font-bold text-[10px] md:text-[11px] uppercase tracking-widest shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5"
