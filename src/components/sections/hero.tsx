@@ -28,7 +28,7 @@ export function Hero({
   return (
     <section
       id="nos-offres"
-      className="relative min-h-screen w-full flex flex-col items-start justify-start overflow-hidden pt-20"
+      className="relative min-h-screen w-full flex flex-col items-start justify-start overflow-hidden pt-20 md:pt-32"
     >
       {/* Background image */}
       {heroImage && (
