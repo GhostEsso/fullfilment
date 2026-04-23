@@ -13,7 +13,7 @@ const urbanist = Urbanist({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://fullfilment-eight.vercel.app'),
+  metadataBase: new URL('https://kabafulfillment.com'),
   title: 'Kaba Fulfillment – Logistique & Livraison en Zone UEMOA',
   description: 'Kaba Fulfillment gère le stockage, la préparation et la livraison de vos commandes à Lomé et en zone UEMOA. Vendez partout en Afrique de l\'Ouest, sans vous déplacer.',
   keywords: [
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     'kaba logistique',
   ],
   alternates: {
-    canonical: 'https://fullfilment-eight.vercel.app/',
+    canonical: 'https://kabafulfillment.com/',
   },
   robots: {
     index: true,
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Kaba Fulfillment – Logistique & Livraison en Zone UEMOA',
     description: 'Kaba Fulfillment gère le stockage, la préparation et la livraison de vos commandes à Lomé et en zone UEMOA. Vendez partout en Afrique de l\'Ouest, sans vous déplacer.',
-    url: 'https://fullfilment-eight.vercel.app/',
+    url: 'https://kabafulfillment.com/',
     siteName: 'Kaba Fulfillment',
     locale: 'fr_TG',
     type: 'website',
@@ -63,7 +63,7 @@ const businessSchema = {
   '@context': 'https://schema.org',
   '@type': ['LocalBusiness', 'Service'],
   'name': 'Kaba Fulfillment',
-  'image': 'https://fullfilment-eight.vercel.app/assets/images/pic.jpg',
+  'image': 'https://kabafulfillment.com/assets/images/pic.jpg',
   'description': 'Kaba Fulfillment gère le stockage, la préparation et la livraison de vos commandes à Lomé et en zone UEMOA.',
   'address': {
     '@type': 'PostalAddress',
@@ -78,7 +78,7 @@ const businessSchema = {
   },
   'telephone': '+228 70 69 42 06',
   'email': 'infos@kabafulfillment.com',
-  'url': 'https://fullfilment-eight.vercel.app',
+  'url': 'https://kabafulfillment.com',
   'areaServed': [
     { '@type': 'Country', 'name': 'Togo' },
     { '@type': 'Country', 'name': 'Côte d\'Ivoire' },

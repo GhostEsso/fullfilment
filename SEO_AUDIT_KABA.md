@@ -36,7 +36,7 @@
 ## 🛠️ Instructions pour Google Search Console
 
 1. Connectez-vous à [Google Search Console](https://search.google.com/search-console).
-2. Ajoutez la propriété `https://fullfilment-eight.vercel.app/` (ou votre futur domaine custom).
+2. Ajoutez la propriété `https://kabafulfillment.com/`.
 3. Dans le menu de gauche, allez dans **Sitemaps**.
 4. Saisissez `sitemap.xml` dans "Ajouter un sitemap" et cliquez sur **Envoyer**.
 5. Google commencera à indexer vos pages dans les 24h à 48h.

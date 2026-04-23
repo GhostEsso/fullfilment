@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /api/
 
-Sitemap: https://fullfilment-eight.vercel.app/sitemap.xml
+Sitemap: https://kabafulfillment.com/sitemap.xml
