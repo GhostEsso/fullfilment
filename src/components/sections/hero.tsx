@@ -81,7 +81,7 @@ export function Hero({
           </div>
 
           {/* MIDDLE SECTION: Offer specific content */}
-          <div className="flex flex-col justify-center mt-16 md:min-h-[200px]">
+          <div className="flex flex-col justify-center mt-16 md:mt-24 md:min-h-[200px] border-l-2 border-white/10 pl-6 md:pl-10">
             <h1 className="font-headline text-4xl sm:text-5xl md:text-4xl lg:text-8xl font-black uppercase tracking-tighter leading-[0.85] text-white">
               {currentOffer.name}
               <span className="block mt-2 text-2xl md:text-2xl lg:text-5xl font-black text-white/40 normal-case tracking-normal">
@@ -101,7 +101,7 @@ export function Hero({
           </div>
 
           {/* BOTTOM SECTION: CTAs */}
-          <div className="flex flex-wrap gap-3 md:gap-5 mb-4 mt-12 md:mt-10">
+          <div className="flex flex-wrap gap-3 md:gap-5 mb-4 mt-12 md:mt-16">
             <Button
               asChild
               className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 md:px-10 h-12 md:h-12 rounded-full font-bold text-[10px] md:text-[11px] uppercase tracking-widest shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5"
