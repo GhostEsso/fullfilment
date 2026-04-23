@@ -28,7 +28,7 @@ export function Hero({
   return (
     <section
       id="nos-offres"
-      className="relative min-h-screen w-full flex flex-col items-start justify-start overflow-hidden pt-20 md:pt-32"
+      className="relative min-h-screen w-full flex flex-col items-start justify-start overflow-hidden pt-20 md:pt-24"
     >
       {/* Background image */}
       {heroImage && (
@@ -71,7 +71,7 @@ export function Hero({
             </div>
 
             {/* General Message (Header) */}
-            <h2 className="text-2xl md:text-4xl lg:text-5xl font-black text-white tracking-tight leading-[1.1] max-w-2xl font-headline">
+            <h2 className="text-2xl md:text-3xl lg:text-5xl font-black text-white tracking-tight leading-[1.1] max-w-2xl font-headline">
               Vendez au Togo maintenant avec Kaba.
             </h2>
             <p className="text-sm md:text-lg font-bold text-white/70 tracking-tight leading-snug max-w-xl">
@@ -81,27 +81,27 @@ export function Hero({
           </div>
 
           {/* MIDDLE SECTION: Offer specific content */}
-          <div className="flex flex-col justify-center my-6 md:mt-10 md:min-h-[350px]">
-            <h1 className="font-headline text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black uppercase tracking-tighter leading-[0.85] text-white">
+          <div className="flex flex-col justify-center my-6 md:mt-6 md:min-h-[250px]">
+            <h1 className="font-headline text-4xl sm:text-5xl md:text-5xl lg:text-8xl font-black uppercase tracking-tighter leading-[0.85] text-white">
               {currentOffer.name}
-              <span className="block mt-2 text-2xl md:text-4xl lg:text-5xl font-black text-white/40 normal-case tracking-normal">
+              <span className="block mt-2 text-2xl md:text-3xl lg:text-5xl font-black text-white/40 normal-case tracking-normal">
                 ({currentOffer.price.toLowerCase() === 'sur devis' ? 'sur mesure' : currentOffer.price.split(' /')[0].toLowerCase()})
               </span>
             </h1>
             
             {/* Specific Subtitle (Message 1) */}
-            <h3 className="text-lg md:text-3xl font-black text-primary uppercase tracking-tighter leading-none mt-2 md:mt-4">
+            <h3 className="text-lg md:text-2xl font-black text-primary uppercase tracking-tighter leading-none mt-2 md:mt-4">
               {currentOffer.subtitle}
             </h3>
 
             {/* Specific Description (Message 2) */}
-            <p className="mt-3 md:mt-8 max-w-xl text-sm md:text-xl text-white font-medium leading-relaxed opacity-90 drop-shadow-lg">
+            <p className="mt-3 md:mt-6 max-w-xl text-sm md:text-lg text-white font-medium leading-relaxed opacity-90 drop-shadow-lg">
               {currentOffer.description}
             </p>
           </div>
 
           {/* BOTTOM SECTION: CTAs */}
-          <div className="flex flex-wrap gap-3 md:gap-5 mb-4 md:mt-8">
+          <div className="flex flex-wrap gap-3 md:gap-5 mb-4 md:mt-6">
             <Button
               asChild
               className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 md:px-10 h-12 md:h-14 rounded-full font-bold text-[10px] md:text-[11px] uppercase tracking-widest shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5"
