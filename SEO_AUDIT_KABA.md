@@ -4,7 +4,7 @@
 
 ### 1. Métadonnées & Fondations Technique
 - **Metadata Next.js** : Configuration complète dans `layout.tsx` (Title, Description, Keywords).
-- **SEO Social** : Implémentation des balises OpenGraph (Facebook/LinkedIn) et Twitter Cards avec image de partage (`/assets/images/pic.jpg`).
+- **SEO Social** : Implémentation des balises OpenGraph (Facebook/LinkedIn) et Twitter Cards avec image de partage (`/assets/images/hero_fulfillment_notext.png`).
 - **Canonalisation** : Ajout de la balise `rel="canonical"` pour fixer l'autorité sur l'URL officielle.
 - **Localisation** : Attribut `lang="fr"` forcé sur la balise `<html>`.
 

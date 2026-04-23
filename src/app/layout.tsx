@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/assets/images/pic.jpg',
+        url: '/assets/images/hero_fulfillment_notext.png',
         width: 1200,
         height: 630,
         alt: 'Kaba Fulfillment - Logistique & Livraison',
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Kaba Fulfillment – Logistique & Livraison en Zone UEMOA',
     description: 'Kaba Fulfillment gère le stockage, la préparation et la livraison de vos commandes à Lomé et en zone UEMOA. Vendez partout en Afrique de l\'Ouest, sans vous déplacer.',
-    images: ['/assets/images/pic.jpg'],
+    images: ['/assets/images/hero_fulfillment_notext.png'],
   },
   icons: {
     icon: '/icon.png?v=1',
@@ -63,7 +63,7 @@ const businessSchema = {
   '@context': 'https://schema.org',
   '@type': ['LocalBusiness', 'Service'],
   'name': 'Kaba Fulfillment',
-  'image': 'https://kabafulfillment.com/assets/images/pic.jpg',
+  'image': 'https://kabafulfillment.com/assets/images/hero_fulfillment_notext.png',
   'description': 'Kaba Fulfillment gère le stockage, la préparation et la livraison de vos commandes à Lomé et en zone UEMOA.',
   'address': {
     '@type': 'PostalAddress',
