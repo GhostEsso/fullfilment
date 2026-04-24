@@ -1,5 +1,11 @@
+# *
 User-agent: *
 Allow: /
 Disallow: /api/
 
+# Host
+Host: https://kabafulfillment.com
+
+# Sitemaps
 Sitemap: https://kabafulfillment.com/sitemap.xml
+Sitemap: https://kabafulfillment.com/server-sitemap.xml

@@ -102,7 +102,7 @@ export default function MentionsLegales() {
                   Conformément aux dispositions de la loi 78-17 du 6 janvier 1978 modifiée, l’utilisateur du site <a href="https://kabafulfillment.com">https://kabafulfillment.com</a> dispose d’un droit d’accès, de modification et de suppression des informations collectées. Pour exercer ce droit, envoyez un message à notre Délégué à la Protection des Données : Ulrich ABIGUIME - <a href="mailto:a.ulrich@kabafulfillment.com">a.ulrich@kabafulfillment.com</a>.
                 </p>
                 <p>
-                  Pour plus d'informations sur la façon dont nous traitons vos données (type de données, finalité, destinataire...), lisez notre <a href="https://kabafulfillment.com/conditions-generales-utilisations#CGU">Charte de Confidentialité</a>.
+                  Pour plus d'informations sur la façon dont nous traitons vos données (type de données, finalité, destinataire...), lisez notre <a href="/confidentialite">Charte de Confidentialité</a>.
                 </p>
               </div>
 
