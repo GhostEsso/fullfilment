@@ -44,7 +44,7 @@ export default function MentionsLegales() {
                 </p>
                 <div className="mt-4 p-6 bg-slate-50 rounded-2xl border border-slate-100 space-y-2">
                   <p><strong>Propriétaire du site :</strong> KABA DELIVERY</p>
-                  <p><strong>Contact :</strong> contact@kabafulfillment.com | 92109474</p>
+                  <p><strong>Contact :</strong> infos@kabafulfillment.com | 92109474</p>
                   <p><strong>Adresse :</strong> 28BP56.</p>
                   <p><strong>Identification de l'entreprise :</strong> SARL KABA DELIVERY au capital social de 24427€</p>
                   <p><strong>SIREN :</strong> - RCS ou RM : TG-LOM 2018B2001</p>

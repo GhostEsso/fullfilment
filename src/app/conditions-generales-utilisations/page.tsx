@@ -114,7 +114,7 @@ export default function CGUPage() {
                   Réclamations
                 </h2>
                 <p>
-                  Nous prenons les réclamations très au sérieux. Merci d’envoyer vos réclamations à <a href="mailto:contact@kabafulfillment.com">contact@kabafulfillment.com</a> ou en contactant directement notre service clientèle. Les réclamations doivent concerner directement nos services de livraison. Toute réclamation liée à une faute du restaurant partenaire sera redirigée vers ce dernier.
+                  Nous prenons les réclamations très au sérieux. Merci d’envoyer vos réclamations à <a href="mailto:infos@kabafulfillment.com">infos@kabafulfillment.com</a> ou en contactant directement notre service clientèle. Les réclamations doivent concerner directement nos services de livraison. Toute réclamation liée à une faute du restaurant partenaire sera redirigée vers ce dernier.
                 </p>
               </section>
 
