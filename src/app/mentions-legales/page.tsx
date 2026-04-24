@@ -9,15 +9,20 @@ export default function MentionsLegales() {
   return (
     <div className="bg-white min-h-screen">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden bg-slate-50">
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-primary/5 rounded-l-full blur-[120px] pointer-events-none" />
+      <section className="relative pt-40 pb-24 overflow-hidden bg-slate-900">
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-primary/10 rounded-l-full blur-[120px] pointer-events-none" />
+        <div className="absolute bottom-0 left-0 w-1/4 h-1/2 bg-slate-800/50 rounded-tr-full blur-[80px] pointer-events-none" />
         <div className="container relative z-10">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tight mb-6 font-headline">
-              Mentions <span className="text-primary">Légales</span>
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 mb-6">
+              <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
+              <span className="text-[10px] font-black uppercase tracking-widest text-white/70">Documents Légaux</span>
+            </div>
+            <h1 className="text-4xl md:text-6xl font-black text-white tracking-tight mb-6 font-headline">
+              Mentions <span className="text-primary underline decoration-white/10 underline-offset-8">Légales</span>
             </h1>
-            <p className="text-lg text-slate-600 font-medium leading-relaxed">
-              Informations légales relatives à l'utilisation du site kabafulfillment.com et à l'identité de l'entreprise.
+            <p className="text-lg md:text-xl text-white/70 font-medium leading-relaxed max-w-2xl">
+              Informations légales relatives à l'utilisation du site kabafulfillment.com et à l'identité de l'entreprise SARL KABA DELIVERY.
             </p>
           </div>
         </div>
