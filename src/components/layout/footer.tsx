@@ -47,7 +47,7 @@ export function Footer() {
             <div className="flex flex-wrap gap-3 mt-6">
               {[
                 { icon: Facebook, href: "https://web.facebook.com/kabadelivery" },
-                { icon: Instagram, href: "https://www.instagram.com/kaba_delivery/" },
+                { icon: Instagram, href: "https://www.instagram.com/kabadelivery/" },
                 { icon: Linkedin, href: "https://www.linkedin.com/company/kaba-delivery-sarl/posts/?feedView=all" },
                 { icon: Twitter, href: "https://x.com/kabadelivery" },
                 { icon: TikTokIcon, href: "https://www.tiktok.com/@kabadelivery" }
