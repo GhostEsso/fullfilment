@@ -122,6 +122,7 @@ export function Footer() {
           </p>
           <div className="flex gap-6 text-xs font-semibold">
             <Link href="/mentions-legales" className="hover:text-primary transition-colors">Mentions Légales</Link>
+            <Link href="/conditions-generales-utilisations" className="hover:text-primary transition-colors">CGU</Link>
             <Link href="/confidentialite" className="hover:text-primary transition-colors">Confidentialité</Link>
           </div>
         </div>
