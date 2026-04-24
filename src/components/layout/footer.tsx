@@ -49,7 +49,7 @@ export function Footer() {
                 { icon: Facebook, href: "https://web.facebook.com/kabadelivery" },
                 { icon: Instagram, href: "https://www.instagram.com/kaba_delivery/" },
                 { icon: Linkedin, href: "https://www.linkedin.com/company/kaba-delivery-sarl/posts/?feedView=all" },
-                { icon: Twitter, href: "https://x.com/kaba_delivery" },
+                { icon: Twitter, href: "https://x.com/kabadelivery" },
                 { icon: TikTokIcon, href: "https://www.tiktok.com/@kabadelivery" }
               ].map((social, idx) => (
                 <a 
