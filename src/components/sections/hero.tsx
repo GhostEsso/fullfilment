@@ -52,7 +52,7 @@ export function Hero({
 
         {/* Left / main content */}
         <div className="md:col-span-7 flex flex-col justify-start md:justify-center text-left py-4 md:py-0">
-          
+
           {/* TOP SECTION: Badge & Header */}
           <div className="flex flex-col gap-3 md:gap-8 mt-4 md:mt-0">
             {/* Badge */}
@@ -88,7 +88,7 @@ export function Hero({
                 ({currentOffer.price.toLowerCase() === 'sur devis' ? 'sur mesure' : currentOffer.price.split(' /')[0].toLowerCase()})
               </span>
             </h1>
-            
+
             {/* Specific Subtitle (Message 1) */}
             <h3 className="text-lg md:text-xl font-black text-primary uppercase tracking-tighter leading-none mt-2 md:mt-4">
               {currentOffer.subtitle}
