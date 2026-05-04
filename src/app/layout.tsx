@@ -1,10 +1,14 @@
 import type { Metadata } from 'next';
 import { Urbanist } from 'next/font/google';
+import Script from 'next/script';
+
 import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { WhatsAppFloatingButton } from '@/components/ui/whatsapp-button';
+import Analytics from '@/components/analytics';
+import { Suspense } from 'react';
 
 const urbanist = Urbanist({
   subsets: ['latin'],
@@ -119,6 +123,18 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(businessSchema) }}
           suppressHydrationWarning
         />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-8VNH29R4QL"
+          strategy="afterInteractive"
+        />
+        <Script id="ga4" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-8VNH29R4QL');
+          `}
+        </Script>
       </head>
       <body
         className={`${urbanist.variable} font-sans antialiased`}
@@ -129,6 +145,9 @@ export default function RootLayout({
         <WhatsAppFloatingButton />
         <Footer />
         <Toaster />
+        <Suspense>
+          <Analytics />
+        </Suspense>
       </body>
     </html>
   );

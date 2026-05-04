@@ -2,6 +2,8 @@
 
 import * as React from 'react';
 import { getWhatsAppLink } from '@/lib/utils';
+import { event } from '@/lib/gtag';
+
 
 export function WhatsAppFloatingButton() {
   return (
@@ -9,6 +11,11 @@ export function WhatsAppFloatingButton() {
       href={getWhatsAppLink('Intéressé(e)')}
       target="_blank"
       rel="noopener noreferrer"
+      onClick={() => event({
+        action: 'whatsapp_click',
+        category: 'engagement',
+        label: 'floating_button',
+      })}
       className="fixed bottom-3 right-3 md:bottom-8 md:right-8 z-[10000] flex items-center gap-1.5 md:gap-3 bg-[#25D366] text-white px-3 py-2 md:px-6 md:py-4 rounded-full shadow-[0_8px_20px_rgba(37,211,102,0.3)] md:shadow-[0_15px_35px_rgba(37,211,102,0.4)] hover:scale-110 hover:rotate-2 active:scale-95 transition-all duration-300 group"
     >
       <div className="relative">

@@ -5,6 +5,8 @@ import { Check, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn, WHATSAPP_URL, getWhatsAppLink } from '@/lib/utils';
 import type { ServiceOffer } from '@/lib/types';
+import { event } from '@/lib/gtag';
+
 
 const SCROLL_MULTIPLIER = 150;
 
@@ -161,7 +163,17 @@ export function Pricing({ offers }: PricingProps) {
                             : 'bg-primary text-primary-foreground hover:bg-primary/90'
                       )}
                     >
-                      <a href={getWhatsAppLink(offer.name)} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
+                      <a 
+                        href={getWhatsAppLink(offer.name)} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="flex items-center justify-center gap-2"
+                        onClick={() => event({
+                          action: 'select_offer',
+                          category: 'pricing',
+                          label: offer.name,
+                        })}
+                      >
                         <span>{index === 4 ? 'Nous contacter' : 'Choisir cette offre'}</span>
                         <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover/btn:translate-x-1" />
                       </a>

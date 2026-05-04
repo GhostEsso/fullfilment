@@ -6,6 +6,8 @@ import type { ServiceOffer } from '@/lib/types';
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { getWhatsAppLink } from '@/lib/utils';
+import { event } from '@/lib/gtag';
+
 
 interface HeroProps {
   currentOffer: ServiceOffer;
@@ -106,7 +108,16 @@ export function Hero({
               asChild
               className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 md:px-10 h-12 md:h-12 rounded-full font-bold text-[10px] md:text-[11px] uppercase tracking-widest shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5"
             >
-              <a href={getWhatsAppLink(currentOffer.name)} target="_blank" rel="noopener noreferrer">
+              <a 
+                href={getWhatsAppLink(currentOffer.name)} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                onClick={() => event({
+                  action: 'select_offer',
+                  category: 'engagement',
+                  label: currentOffer.name,
+                })}
+              >
                 Choisir cette offre
               </a>
             </Button>
