@@ -117,12 +117,6 @@ export default function RootLayout({
   return (
     <html lang="fr" suppressHydrationWarning>
       <head>
-        <script
-          id="business-schema"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(businessSchema) }}
-          suppressHydrationWarning
-        />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-8VNH29R4QL"
           strategy="afterInteractive"
@@ -135,6 +129,12 @@ export default function RootLayout({
             gtag('config', 'G-8VNH29R4QL');
           `}
         </Script>
+        <script
+          id="business-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(businessSchema) }}
+          suppressHydrationWarning
+        />
       </head>
       <body
         className={`${urbanist.variable} font-sans antialiased`}
