@@ -86,7 +86,7 @@ export function Hero({
           <div className="flex flex-col justify-center mt-16 md:mt-24 md:min-h-[200px] border-l-2 border-white/10 pl-6 md:pl-10">
             <h1 className="font-headline text-4xl sm:text-5xl md:text-4xl lg:text-8xl font-black uppercase tracking-tighter leading-[0.85] text-white">
               {currentOffer.name}
-              <span className="block mt-2 text-2xl md:text-2xl lg:text-5xl font-black text-white/40 normal-case tracking-normal">
+              <span className="block mt-2 text-2xl md:text-2xl lg:text-5xl font-black text-white/60 normal-case tracking-normal">
                 ({currentOffer.price.toLowerCase() === 'sur devis' ? 'sur mesure' : currentOffer.price.split(' /')[0].toLowerCase()})
               </span>
             </h1>

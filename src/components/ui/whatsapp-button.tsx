@@ -11,6 +11,7 @@ export function WhatsAppFloatingButton() {
       href={getWhatsAppLink('Intéressé(e)')}
       target="_blank"
       rel="noopener noreferrer"
+      aria-label="Contacter Kaba Fulfillment sur WhatsApp"
       onClick={() => event({
         action: 'whatsapp_click',
         category: 'engagement',

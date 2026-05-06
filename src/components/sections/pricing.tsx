@@ -109,7 +109,7 @@ export function Pricing({ offers }: PricingProps) {
                         {offer.price.includes('/') && (
                           <span className={cn(
                             'text-xs font-bold',
-                            isFeatured ? 'text-white/60' : 'text-muted-foreground'
+                            isFeatured ? 'text-white/80' : 'text-muted-foreground'
                           )}>
                             /{offer.price.split('/')[1]?.trim()}
                           </span>

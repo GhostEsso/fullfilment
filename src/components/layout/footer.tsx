@@ -35,28 +35,29 @@ export function Footer() {
                   height={70} 
                   className="h-16 md:h-20 w-auto object-contain transition-transform duration-500 group-hover:scale-105"
                 />
-                <span className="text-[10px] md:text-xs font-black uppercase tracking-[0.2em] text-foreground/40">
+                <span className="text-[10px] md:text-xs font-black uppercase tracking-[0.2em] text-foreground/60">
                   Solutions de Stockage & Livraison
                 </span>
               </div>
             </Link>
-            <p className="text-lg leading-relaxed max-w-md font-medium text-foreground/60">
+            <p className="text-lg leading-relaxed max-w-md font-medium text-foreground/70">
               E-commerce & Logistique depuis 2019. Vendez, Kaba gère votre logistique.
             </p>
             
             <div className="flex flex-wrap gap-3 mt-6">
               {[
-                { icon: Facebook, href: "https://web.facebook.com/kabadelivery" },
-                { icon: Instagram, href: "https://www.instagram.com/kaba_delivery/" },
-                { icon: Linkedin, href: "https://www.linkedin.com/company/kaba-delivery-sarl/posts/?feedView=all" },
-                { icon: Twitter, href: "https://x.com/kabadelivery" },
-                { icon: TikTokIcon, href: "https://www.tiktok.com/@kabadelivery" }
+                { icon: Facebook, href: "https://web.facebook.com/kabadelivery", label: "Facebook" },
+                { icon: Instagram, href: "https://www.instagram.com/kaba_delivery/", label: "Instagram" },
+                { icon: Linkedin, href: "https://www.linkedin.com/company/kaba-delivery-sarl/posts/?feedView=all", label: "LinkedIn" },
+                { icon: Twitter, href: "https://x.com/kabadelivery", label: "Twitter / X" },
+                { icon: TikTokIcon, href: "https://www.tiktok.com/@kabadelivery", label: "TikTok" }
               ].map((social, idx) => (
                 <a 
                   key={idx}
                   href={social.href} 
                   target="_blank" 
                   rel="noopener noreferrer"
+                  aria-label={`Suivez-nous sur ${social.label}`}
                   className="w-10 h-10 flex items-center justify-center rounded-xl bg-white border border-black/5 text-foreground/60 hover:bg-primary hover:text-white hover:border-primary hover:-translate-y-1 transition-all duration-300 shadow-sm"
                 >
                   <social.icon className="h-4 w-4" />
