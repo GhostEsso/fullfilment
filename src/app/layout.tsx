@@ -163,7 +163,7 @@ export default function RootLayout({
         suppressHydrationWarning
       >
         <Header />
-        <main className="pt-0">{children}</main>
+        <main className="pt-0 overflow-x-hidden">{children}</main>
         <WhatsAppFloatingButton />
         <Footer />
         <Toaster />
