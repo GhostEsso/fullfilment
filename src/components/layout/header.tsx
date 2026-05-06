@@ -90,6 +90,7 @@ export function Header() {
         <div className="flex items-center md:hidden relative z-[10001]">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label={isMobileMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}
               className={cn(
                 "p-2 rounded-xl transition-all duration-300",
                 isMobileMenuOpen 
