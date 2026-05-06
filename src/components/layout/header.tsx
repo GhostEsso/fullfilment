@@ -61,7 +61,7 @@ export function Header() {
           />
           <span className={cn(
             "text-[7px] md:text-[9px] font-black uppercase tracking-[0.2em] transition-all duration-500 mt-0.5",
-            isScrolled ? "text-primary/80" : "text-white/60"
+            isScrolled ? "text-primary" : "text-white"
           )}>
             Solutions de Stockage & Livraison
           </span>

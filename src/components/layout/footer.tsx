@@ -35,12 +35,12 @@ export function Footer() {
                   height={70} 
                   className="h-16 md:h-20 w-auto object-contain transition-transform duration-500 group-hover:scale-105"
                 />
-                <span className="text-[10px] md:text-xs font-black uppercase tracking-[0.2em] text-foreground/60">
+                <span className="text-[10px] md:text-xs font-black uppercase tracking-[0.2em] text-foreground/80">
                   Solutions de Stockage & Livraison
                 </span>
               </div>
             </Link>
-            <p className="text-lg leading-relaxed max-w-md font-medium text-foreground/70">
+            <p className="text-lg leading-relaxed max-w-md font-medium text-foreground/90">
               E-commerce & Logistique depuis 2019. Vendez, Kaba gère votre logistique.
             </p>
             

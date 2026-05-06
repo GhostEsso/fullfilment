@@ -37,7 +37,7 @@ export function Faq() {
               <AccordionTrigger className="text-left text-lg md:text-xl font-black py-6 hover:no-underline hover:text-primary transition-colors text-foreground">
                 {item.question}
               </AccordionTrigger>
-              <AccordionContent className="text-foreground/70 text-base md:text-lg leading-relaxed pb-6 font-medium">
+              <AccordionContent className="text-foreground/90 text-base md:text-lg leading-relaxed pb-6 font-medium">
                 {item.answer}
               </AccordionContent>
             </AccordionItem>
