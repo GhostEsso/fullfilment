@@ -61,7 +61,7 @@ export function Cta() {
                  C'est le moment d'agir
               </div>
               <h2 className="text-2xl sm:text-4xl lg:text-6xl font-black font-headline tracking-tighter leading-[1.1] text-balance">
-                Prêts à <span className="text-white/80">ouvrir</span> votre business au marché Togolais ?
+                Prêts à <span className="text-white">ouvrir</span> votre business au marché Togolais ?
               </h2>
               <p className="mt-4 text-sm sm:text-lg text-white/90 font-medium leading-relaxed max-w-sm sm:max-w-xl">
                 Rejoignez les e-commerçants et entreprises qui nous font confiance. Simplifiez vos opérations et accélérez votre croissance dès aujourd'hui.

@@ -54,7 +54,7 @@ export function About() {
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black font-headline tracking-tighter text-foreground leading-[1.05] text-balance">
               Kaba Fulfillment — Le Meilleur en Afrique de l'Ouest.
             </h2>
-            <p className="mt-6 text-lg sm:text-xl leading-relaxed text-muted-foreground font-medium max-w-2xl">
+            <p className="mt-6 text-lg sm:text-xl leading-relaxed text-foreground/80 font-medium max-w-2xl">
               Rejoignez les e-commerçants et entreprises qui font confiance à Kaba Fulfillment pour gérer leur logistique de A à Z. Concentrez-vous sur vos ventes, on s'occupe du reste.
             </p>
             
@@ -62,17 +62,17 @@ export function About() {
                 <div className="flex flex-col items-center lg:items-start lg:border-l-2 lg:border-primary lg:pl-6 bg-primary/5 lg:bg-transparent p-6 lg:p-0 rounded-2xl lg:rounded-none">
                     <span className="text-4xl sm:text-5xl font-black text-primary leading-none">5</span>
                     <span className="text-sm sm:text-base font-bold uppercase tracking-wider mt-3 text-foreground">Offres</span>
-                    <span className="text-sm text-muted-foreground mt-2 leading-tight">Pour tous les profils d'e-commerçants</span>
+                    <span className="text-sm text-foreground/80 mt-2 leading-tight">Pour tous les profils d'e-commerçants</span>
                 </div>
                 <div className="flex flex-col items-center lg:items-start lg:border-l-2 lg:border-primary lg:pl-6 bg-primary/5 lg:bg-transparent p-6 lg:p-0 rounded-2xl lg:rounded-none">
                     <span className="text-4xl sm:text-5xl font-black text-primary leading-none">—</span>
                     <span className="text-sm sm:text-base font-bold uppercase tracking-wider mt-3 text-foreground">Zone UEMOA</span>
-                    <span className="text-sm text-muted-foreground mt-2 leading-tight">Couverture régionale complète</span>
+                    <span className="text-sm text-foreground/80 mt-2 leading-tight">Couverture régionale complète</span>
                 </div>
                 <div className="flex flex-col items-center lg:items-start lg:border-l-2 lg:border-primary lg:pl-6 bg-primary/5 lg:bg-transparent p-6 lg:p-0 rounded-2xl lg:rounded-none">
                     <span className="text-4xl sm:text-5xl font-black text-primary leading-none">—</span>
                     <span className="text-sm sm:text-base font-bold uppercase tracking-wider mt-3 text-foreground">Sur Mesure</span>
-                    <span className="text-sm text-muted-foreground mt-2 leading-tight">Solutions adaptées à votre activité</span>
+                    <span className="text-sm text-foreground/80 mt-2 leading-tight">Solutions adaptées à votre activité</span>
                 </div>
             </div>
           </div>

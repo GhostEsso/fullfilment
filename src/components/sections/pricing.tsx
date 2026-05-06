@@ -33,7 +33,7 @@ export function Pricing({ offers }: PricingProps) {
           <h2 className="text-4xl font-black tracking-tighter sm:text-6xl text-foreground font-headline leading-[1.05]">
             Investissez dans <span className="text-primary">votre succès</span> logistique.
           </h2>
-          <p className="mt-6 text-xl text-muted-foreground max-w-2xl font-medium leading-relaxed">
+          <p className="mt-6 text-xl text-foreground/80 max-w-2xl font-medium leading-relaxed">
             Des tarifs transparents, sans frais cachés, pour propulser votre business au Togo et dans la zone UEMOA.
           </p>
         </div>
@@ -84,7 +84,7 @@ export function Pricing({ offers }: PricingProps) {
                   {/* Subtitle */}
                   <p className={cn(
                     'text-[1.05rem] font-medium leading-relaxed mb-6 min-h-[50px]',
-                    isFeatured ? 'text-white/80' : 'text-muted-foreground'
+                    isFeatured ? 'text-white' : 'text-foreground/80'
                   )}>
                     {offer.subtitle}
                   </p>
