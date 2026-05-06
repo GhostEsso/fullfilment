@@ -62,7 +62,7 @@ export function WhyKaba() {
           <h2 className="text-4xl font-black tracking-tighter sm:text-6xl text-foreground font-headline leading-[1.05]">
             Pourquoi propulser votre business avec <span className="text-primary">Kaba Fulfillment</span> ?
           </h2>
-          <p className="mt-6 text-xl text-muted-foreground font-medium max-w-2xl">
+          <p className="mt-6 text-xl text-foreground/80 font-medium max-w-2xl">
             Bien plus qu'un prestataire, nous devenons le moteur de votre croissance sur le marché africain.
           </p>
         </div>
@@ -95,7 +95,7 @@ export function WhyKaba() {
                 <h3 className="font-black text-xl text-foreground mb-3 tracking-tight">
                   {benefit.title}
                 </h3>
-                <p className="text-[1.05rem] text-muted-foreground leading-relaxed font-medium">
+                <p className="text-[1.05rem] text-foreground/80 leading-relaxed font-medium">
                   {benefit.description}
                 </p>
               </div>

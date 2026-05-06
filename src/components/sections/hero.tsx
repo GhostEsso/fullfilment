@@ -45,7 +45,7 @@ export function Hero({
       )}
 
       {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black/55" />
+      <div className="absolute inset-0 bg-black/65" />
 
 
 
@@ -72,11 +72,11 @@ export function Hero({
               </span>
             </div>
 
-            {/* General Message (Header) */}
-            <h2 className="text-2xl md:text-xl lg:text-5xl font-black text-white tracking-tight leading-[1.1] max-w-2xl font-headline">
+            {/* General Message (Header) - This is our main H1 */}
+            <h1 className="text-2xl md:text-xl lg:text-5xl font-black text-white tracking-tight leading-[1.1] max-w-2xl font-headline">
               Vendez au Togo maintenant avec Kaba.
-            </h2>
-            <p className="text-sm md:text-lg font-bold text-white/70 tracking-tight leading-snug max-w-xl">
+            </h1>
+            <p className="text-sm md:text-lg font-bold text-white/90 tracking-tight leading-snug max-w-xl">
               Solutions de Stockage, gestion de commandes et livraisons pour
               e-commerçants et entreprises mondiales.
             </p>
@@ -84,12 +84,12 @@ export function Hero({
 
           {/* MIDDLE SECTION: Offer specific content */}
           <div className="flex flex-col justify-center mt-16 md:mt-24 md:min-h-[200px] border-l-2 border-white/10 pl-6 md:pl-10">
-            <h1 className="font-headline text-4xl sm:text-5xl md:text-4xl lg:text-8xl font-black uppercase tracking-tighter leading-[0.85] text-white">
+            <h2 className="font-headline text-4xl sm:text-5xl md:text-4xl lg:text-8xl font-black uppercase tracking-tighter leading-[0.85] text-white">
               {currentOffer.name}
               <span className="block mt-2 text-2xl md:text-2xl lg:text-5xl font-black text-white/90 normal-case tracking-normal">
                 ({currentOffer.price.toLowerCase() === 'sur devis' ? 'sur mesure' : currentOffer.price.split(' /')[0].toLowerCase()})
               </span>
-            </h1>
+            </h2>
 
             {/* Specific Subtitle (Message 1) */}
             <h3 className="text-lg md:text-xl font-black text-primary uppercase tracking-tighter leading-none mt-2 md:mt-4">
@@ -147,7 +147,7 @@ export function Hero({
         {Array.from({ length: totalOffers }).map((_, i) => (
           <div key={i} className="flex-1">
             {/* Track */}
-            <div className="relative h-[3px] w-full rounded-full bg-white/20 overflow-hidden">
+            <div className="relative h-[3px] w-full rounded-full bg-white/30 overflow-hidden">
               {i < currentOfferIndex && (
                 // Already played — fully filled
                 <div className="absolute inset-0 bg-primary rounded-full" />

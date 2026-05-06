@@ -103,14 +103,14 @@ export function Location() {
                   <div className="mt-1.5 h-3 w-3 rounded-full bg-primary animate-pulse" />
                   <div>
                     <h4 className="font-black text-foreground">Service de Retrait Express</h4>
-                    <p className="text-sm text-muted-foreground mt-1">Évitez les délais de livraison pour vos clients les plus pressés.</p>
+                    <p className="text-sm text-foreground/80 mt-1">Évitez les délais de livraison pour vos clients les plus pressés.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4 p-5 bg-white/50 rounded-2xl border border-white/40 shadow-sm transition-all hover:bg-white hover:shadow-md">
                   <div className="mt-1.5 h-3 w-3 rounded-full bg-primary" />
                   <div>
                     <h4 className="font-black text-foreground">Accueil Professionnel</h4>
-                    <p className="text-sm text-muted-foreground mt-1">Une équipe dédiée pour accueillir vos clients comme s'ils étaient chez vous.</p>
+                    <p className="text-sm text-foreground/80 mt-1">Une équipe dédiée pour accueillir vos clients comme s'ils étaient chez vous.</p>
                   </div>
                 </div>
               </div>

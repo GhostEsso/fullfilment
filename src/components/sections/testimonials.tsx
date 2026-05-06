@@ -70,7 +70,7 @@ export function Testimonials() {
           <h2 className="text-4xl font-black tracking-tighter sm:text-5xl text-foreground font-headline leading-tight">
             Des entreprises qui <span className="text-primary">prospèrent</span> avec nous.
           </h2>
-          <p className="mt-4 text-xl text-muted-foreground font-medium">
+          <p className="mt-4 text-xl text-foreground/80 font-medium">
             Découvrez comment Kaba Fulfillment aide les marques à conquérir le marché togolais.
           </p>
         </div>
