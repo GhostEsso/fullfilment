@@ -1,7 +1,7 @@
 'use client';
 
 import { useRef } from 'react';
-import { Check, ArrowRight } from 'lucide-react';
+import { Check, ArrowRight, CalendarDays } from 'lucide-react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
@@ -130,6 +130,13 @@ export function Pricing({ offers }: PricingProps) {
           <p className="pr-subtitle mt-6 text-xl text-muted-foreground max-w-2xl font-medium leading-relaxed">
             Des tarifs transparents, sans frais cachés, pour propulser votre business au Togo et dans la zone UEMOA.
           </p>
+          <Button
+            className="pr-subtitle mt-8 h-12 px-8 text-[11px] font-bold uppercase tracking-widest rounded-full shadow-md hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2"
+            onClick={() => window.dispatchEvent(new CustomEvent('open-booking-modal'))}
+          >
+            <CalendarDays className="h-4 w-4" />
+            Prendre un rendez-vous
+          </Button>
         </div>
 
         {/* Cards Grid */}

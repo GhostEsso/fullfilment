@@ -160,7 +160,7 @@ export function Cta() {
                   className="cta-btn border-white/30 text-white bg-white/10 backdrop-blur-sm hover:bg-white hover:text-primary w-full sm:w-fit h-12 md:h-14 px-6 md:px-10 rounded-full text-[10px] md:text-[11px] font-bold uppercase tracking-widest transition-all duration-300 hover:-translate-y-0.5 whitespace-nowrap leading-tight flex items-center gap-2"
                 >
                   <CalendarDays className="h-4 w-4" />
-                  Prendre un RDV
+                  Prendre un rendez-vous
                 </Button>
               </div>
             </div>

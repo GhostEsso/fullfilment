@@ -98,7 +98,7 @@ export function Header() {
           )}
         >
           <CalendarDays className="h-3.5 w-3.5 mr-1.5" />
-          Prendre RDV
+          Prendre un rendez-vous
         </Button>
 
         {/* Mobile Menu Toggle */}
@@ -151,7 +151,7 @@ export function Header() {
               }}
             >
               <CalendarDays className="h-5 w-5" />
-              Prendre RDV
+              Prendre un rendez-vous
             </button>
           </nav>
         </div>
