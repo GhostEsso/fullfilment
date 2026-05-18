@@ -6,13 +6,14 @@ import Image from 'next/image';
 import { Menu, X } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
-import { cn, WHATSAPP_URL, getWhatsAppLink } from '@/lib/utils';
+import { cn } from '@/lib/utils';
+import { CalendarDays } from 'lucide-react';
 
 const navLinks = [
-  { href: '#nos-offres', label: 'Nos Offres' },
-  { href: '#pourquoi-kaba', label: 'Pourquoi KABA' },
-  { href: '#tarifs', label: 'Tarifs' },
-  { href: '#faq', label: 'FAQ' },
+  { href: '/#nos-offres', label: 'Nos Offres' },
+  { href: '/#pourquoi-kaba', label: 'Pourquoi KABA' },
+  { href: '/#tarifs', label: 'Tarifs' },
+  { href: '/#faq', label: 'FAQ' },
 ];
 
 export function Header() {
@@ -86,6 +87,20 @@ export function Header() {
         </nav>
 
 
+        {/* Desktop RDV button */}
+        <Button
+          onClick={() => window.dispatchEvent(new CustomEvent('open-booking-modal'))}
+          className={cn(
+            'hidden md:flex rounded-full h-9 px-5 text-[10px] font-black uppercase tracking-widest transition-all duration-300',
+            isScrolled
+              ? 'bg-primary text-white hover:bg-primary/90'
+              : 'bg-white/10 text-white border border-white/20 backdrop-blur-md hover:bg-white hover:text-primary'
+          )}
+        >
+          <CalendarDays className="h-3.5 w-3.5 mr-1.5" />
+          Prendre RDV
+        </Button>
+
         {/* Mobile Menu Toggle */}
         <div className="flex items-center md:hidden relative z-[10001]">
             <button
@@ -124,7 +139,20 @@ export function Header() {
                 {link.label}
               </Link>
             ))}
-            
+            <button
+              className={cn(
+                'mt-4 flex items-center gap-2 text-lg font-black text-primary uppercase tracking-widest hover:opacity-70 transition-all duration-300',
+                isMobileMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+              )}
+              style={{ transitionDelay: `${navLinks.length * 75}ms` }}
+              onClick={() => {
+                setIsMobileMenuOpen(false);
+                window.dispatchEvent(new CustomEvent('open-booking-modal'));
+              }}
+            >
+              <CalendarDays className="h-5 w-5" />
+              Prendre RDV
+            </button>
           </nav>
         </div>
       </div>
