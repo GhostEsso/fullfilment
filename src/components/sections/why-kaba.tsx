@@ -214,7 +214,7 @@ export function WhyKaba() {
                 <h3 className="font-black text-xl text-foreground mb-3 tracking-tight">
                   {benefit.title}
                 </h3>
-                <p className="text-[1.05rem] text-muted-foreground leading-relaxed font-medium">
+                <p className="text-[1.05rem] text-foreground/80 leading-relaxed font-medium">
                   {benefit.description}
                 </p>
               </div>
