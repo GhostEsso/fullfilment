@@ -12,6 +12,7 @@ import { Location } from '@/components/sections/location';
 import { Faq } from '@/components/sections/faq';
 import { Testimonials } from '@/components/sections/testimonials';
 import { Cta } from '@/components/sections/cta';
+import { BookingModal } from '@/components/booking/booking-modal';
 
 export default function Home() {
   const [currentOfferIndex, setCurrentOfferIndex] = React.useState(0);
@@ -64,6 +65,7 @@ export default function Home() {
       <Location />
       <Faq />
       <Cta />
+      <BookingModal />
     </div>
   );
 }
