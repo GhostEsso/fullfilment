@@ -69,15 +69,15 @@ export function Header() {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-1">
+        <nav className="hidden md:flex items-center gap-0.5 lg:gap-1">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               className={cn(
-                "px-4 py-2 rounded-full text-[13px] font-black uppercase tracking-[0.15em] transition-all duration-300 whitespace-nowrap",
-                isScrolled 
-                    ? "text-foreground/70 hover:text-primary hover:bg-primary/5" 
+                "px-2 lg:px-4 py-2 rounded-full text-[11px] lg:text-[13px] font-black uppercase tracking-[0.08em] lg:tracking-[0.15em] transition-all duration-300 whitespace-nowrap",
+                isScrolled
+                    ? "text-foreground/70 hover:text-primary hover:bg-primary/5"
                     : "text-white/80 hover:text-white hover:bg-white/10"
               )}
             >
@@ -91,14 +91,15 @@ export function Header() {
         <Button
           onClick={() => window.dispatchEvent(new CustomEvent('open-booking-modal'))}
           className={cn(
-            'hidden md:flex rounded-full h-9 px-5 text-[10px] font-black uppercase tracking-widest transition-all duration-300',
+            'hidden md:flex rounded-full h-9 px-5 text-[10px] font-black uppercase tracking-widest transition-all duration-300 flex-shrink-0',
             isScrolled
               ? 'bg-primary text-white hover:bg-primary/90'
               : 'bg-white/10 text-white border border-white/20 backdrop-blur-md hover:bg-white hover:text-primary'
           )}
         >
           <CalendarDays className="h-3.5 w-3.5 mr-1.5" />
-          Prendre un rendez-vous
+          <span className="hidden lg:inline">Prendre un rendez-vous</span>
+          <span className="lg:hidden">RDV</span>
         </Button>
 
         {/* Mobile Menu Toggle */}
