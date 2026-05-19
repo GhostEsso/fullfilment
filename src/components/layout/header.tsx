@@ -118,10 +118,10 @@ export function Header() {
         </div>
 
         {/* Mobile Menu Overlay - Solid Full Cover */}
-        <div 
+        <div
           className={cn(
             "fixed inset-0 z-[10000] bg-white transition-all duration-500 ease-in-out md:hidden flex flex-col items-center justify-center",
-            isMobileMenuOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
+            isMobileMenuOpen ? "translate-y-0 opacity-100 pointer-events-auto" : "-translate-y-full opacity-0 pointer-events-none"
           )}
         >
           <nav className="flex flex-col items-center gap-6 w-full px-10 relative z-[10002]">
